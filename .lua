@@ -14,6 +14,8 @@
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+Whitelist:AddParagraph("How do I white list?","You cant whitelist at the moment but in the future this whitelist system will be a key system.")
+ OrionLib:Init()
 
 -- Loser Scripts
 local Loser = Window:MakeTab({
@@ -24,11 +26,10 @@ local Loser = Window:MakeTab({
 local Section = Loser:AddSection({
 	Name = "Garbage Scripts LOL"
 })
-Tab:AddButton({
+Loser:AddButton({
 	Name = "CMD-X Very Buggy LOL",
 	Callback = function()
-      		
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
   	end    
 })
-  Whitelist:AddParagraph("How do I white list?","You cant whitelist at the moment but in the future this whitelist system will be a key system.")
  OrionLib:Init()
