@@ -16,3 +16,4 @@
 })
   Whitelist:AddParagraph("How do I white list?","You cant whitelist at the moment but in the future this whitelist system will be a key system.")
   end
+ OrionLib:Init()
