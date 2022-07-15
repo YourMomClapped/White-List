@@ -14,5 +14,21 @@
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+
+-- Loser Scripts
+local Loser = Window:MakeTab({
+	Name = "Trash Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Loser:AddSection({
+	Name = "Garbage Scripts LOL"
+})
+Tab:AddButton({
+	Name = "CMD-X Very Buggy LOL",
+	Callback = function()
+      		
+  	end    
+})
   Whitelist:AddParagraph("How do I white list?","You cant whitelist at the moment but in the future this whitelist system will be a key system.")
  OrionLib:Init()
