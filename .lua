@@ -294,7 +294,6 @@ local Info = Window:MakeTab({
 })
 Info:AddParagraph("Why did i make this?","Im extremely bored and have nothing to do so i decided to try making scripts, its been pretty fun recently")
 OrionLib:Init()
-end
 
 end
 
