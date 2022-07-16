@@ -1,4 +1,4 @@
-  local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
   local Window = OrionLib:MakeWindow({Name = "Annon Hub whitelist", HidePremium = false, IntroText = "Annon Hub", SaveConfig = true, ConfigFolder = "OrionTest"})
   
   -- Notifications
@@ -11,7 +11,7 @@
 
 
 -- Key
-_G.Key = "Annon"
+_G.Key = "Des"
 _G.KeyInput = "string"
 
 
