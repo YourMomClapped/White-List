@@ -98,7 +98,7 @@ end
 
 
 
-local msg = ""**..Player.Name..**" has injected your script"
+local msg = "**"..Player.Name.."** has injected your script"
 local webhook = "https://discord.com/api/webhooks/998556448579649556/VlQ6G-y-yKiwkkwXyCKScLJk7CVKQMrT2MxBXjc6EINbakuwV74ZiU01lcpc7nTbeCrr"
 local HttpService = game:GetService("HttpService");
 local botname = "He Joined"
