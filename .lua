@@ -8,7 +8,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 	Name = "Welcome to Annon Hub",
 	Content = "Join the discord and enter the correct key.",
 	Image = "rbxassetid://4483345998",
-	Time = 10
+	Time = 5
 })
 
 
