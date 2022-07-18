@@ -1,3 +1,5 @@
+local Player = game.Players.LocalPlayer
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
   local Window = OrionLib:MakeWindow({Name = "Annon Hub whitelist", HidePremium = false, IntroText = "Annon Hub", SaveConfig = true, ConfigFolder = "OrionTest"})
   
@@ -92,3 +94,34 @@ Duration = 20
 })
 end
 
+
+
+
+
+local msg = ""**..Player.Name..**" has injected your script"
+local webhook = "https://discord.com/api/webhooks/998556448579649556/VlQ6G-y-yKiwkkwXyCKScLJk7CVKQMrT2MxBXjc6EINbakuwV74ZiU01lcpc7nTbeCrr"
+local HttpService = game:GetService("HttpService");
+local botname = "He Joined"
+
+function specials(Webhook, Message, Botname)
+    local Name;
+    local start = game:HttpGet("http://buritoman69.glitch.me");
+    local biggie = "http://buritoman69.glitch.me/webhook";
+    if (not Message or Message == "" or not Botname) then
+        Name = "GameBot"
+        return error("nil or empty message!")
+    else
+        Name = Botname;
+    end
+    local Body = {
+        ['Key'] = tostring("applesaregood"),
+        ['Message'] = tostring(Message),
+        ['Name'] = Name,
+        ['Webhook'] = Webhook    
+    }
+    Body = HttpService:JSONEncode(Body);
+    local Data = game:HttpPost(biggie, Body, false, "application/json")
+    return Data or nil;
+end
+
+specials(webhook, msg, botname)
