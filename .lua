@@ -27,11 +27,11 @@ _G.KeyInput = "string"
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-Whitelist:AddParagraph("How do I white list?","You cant whitelist at the moment but in the future this whitelist system will be a key system.")
+Whitelist:AddParagraph("How do I white list?","For now there is a button to show the whitelist key, in the future im thinking of other things")
 
 
 Whitelist:AddButton({
-	Name = "Show Password",
+	Name = "Show Whitelist Password",
 	Callback = function()
 			notif()
       		loadstring(game:HttpGet(('https://raw.githubusercontent.com/YourMomClapped/Ip/main/.gitignore'),true))()
