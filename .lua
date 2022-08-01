@@ -175,38 +175,6 @@ Key:AddTextbox({
 
 
 
-local Help = Window:MakeTab({
-	Name = "Help/Feedback",
-	Icon = "rbxassetid://4370314188",
-	PremiumOnly = false
-})
-
-
-local Section = Help:AddSection({
-	Name = "Help/Feedback"
-})
-
-Help:AddParagraph("FeedBack/Help","You can send feedback or support, suggestions, and questions, we will try to respond/act on your freebacks as soon as possible")
-Help:AddTextbox({
-	Name = "Feedback/Help",
-	Default = "Feedback/Help Here",
-	TextDisappear = true,
-	Callback = function(Value)
-		_G.FeedBackString = Value
-		local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-		SendMessageToWebhook()
-function _G.SendWebHook(url, message)newBody = {["content"] = tostring(message)}; SynWebHook = {Url = url,Body = game.HttpService:JSONEncode(newBody),Method = "POST",Headers = {["content-type"] = "application/json"}};syn.request(SynWebHook)end;
-_G.SendWebHook("https://discord.com/api/webhooks/1001910271163502653/FIdlpMjvcdRAWtNNNnrncPE1z-0sHVSse_lsZkrOR3YcU_hnWGgApl2FYh1XB5SMJ7iy", "***"..Player.Name.."*** has sent feedback: ***".._G.FeedBackString.."***")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/YourMomClapped/White-List/main/.lua", true))()
-	end
-})
-
-
-
-
-
-
-
 
 
 
