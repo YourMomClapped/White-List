@@ -98,6 +98,7 @@ local Profile = Window:MakeTab({
 
 
 
+
 ------- Profile ----------
 
 local Section = Profile:AddSection({
@@ -105,6 +106,16 @@ local Section = Profile:AddSection({
 })
 Profile:AddParagraph("Profile","Annon Hub is the best hub ofc ;) made by Annon#7747 UwW.")
 
+------------------------ Discord Invite ------------------------
+local Section = Profile:AddSection({
+	Name = "Discord Invite"
+})
+Profile:AddButton({
+	Name = "Annon Hub Discord Invite",
+	Callback = function()
+      		Sunrise()
+  	end    
+})
 
 ------ Information --------
 local Section = Profile:AddSection({
@@ -141,7 +152,7 @@ local Key = Window:MakeTab({
 
 
 local Section = Key:AddSection({
-	Name = "White list system"
+	Name = "Reveal Key"
 })
 Key:AddButton({
 	Name = "Show Key",
@@ -151,10 +162,11 @@ Key:AddButton({
   	end    
 })
 
-
 local Section = Key:AddSection({
-	Name = "Key System"
+	Name = "White list system"
 })
+
+
 Key:AddTextbox({
 	Name = "Enter Key",
 	Default = "Key Here",
@@ -170,6 +182,12 @@ Key:AddTextbox({
 		end
 	end	  
 })
+
+
+
+
+
+
 
 
 
