@@ -99,6 +99,7 @@ local Profile = Window:MakeTab({
 
 
 ------- Profile ----------
+
 local Section = Profile:AddSection({
 	Name = "Profile"
 })
@@ -160,13 +161,30 @@ Key:AddTextbox({
 	TextDisappear = true,
 	Callback = function(args)
 		_G.keyinput = args
-		wait(1)
+		if _G.keyinput == _G.Key then
+		AnnonLoading()
+		wait(2)
 		local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-		wait(1)
 		loadingScreen()
 		MakeAnnon()
+		end
 	end	  
 })
+
+
+
+function AnnonLoading()
+	OrionLib:MakeNotification({
+		Name = "Correct Key",
+		Content = "Correct Key Loading Annon Hub . . .",
+		Image = "rbxassetid://4483345998",
+		Time = 5
+	})
+end
+
+
+
+
 
 
 
