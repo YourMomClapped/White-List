@@ -62,16 +62,39 @@ Key:AddButton({
   	end    
 })
 
+
+local Section = Key:AddSection({
+	Name = "Key System"
+})
 Key:AddTextbox({
 	Name = "Enter Key",
 	Default = "Key Here",
 	TextDisappear = true,
 	Callback = function(args)
 		_G.keyinput = args
+		wait(1)
+		local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+		wait(1)
+		loadingScreen()
+		MakeAnnon()
 	end	  
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+--[[
 Key:AddButton({
 	Name = "Check Key",
 	Callback = function()
@@ -82,14 +105,7 @@ Key:AddButton({
 		MakeAnnon()
   	end    
 })
-
-
-
-
-
-
-
-
+]]
 
 
 
@@ -170,12 +186,25 @@ end
 
 
 
---[[
+
     local Player = game.Players.LocalPlayer
-function _G.SendWebHook(url, message)newBody = {["content"] = tostring(message)}; SynWebHook = {Url = url,Body = game.HttpService:JSONEncode(newBody),Method = "POST",Headers = {["content-type"] = "application/json"}};syn.request(SynWebHook)end;
 
-_G.SendWebHook("https://discord.com/api/webhooks/998556448579649556/VlQ6G-y-yKiwkkwXyCKScLJk7CVKQMrT2MxBXjc6EINbakuwV74ZiU01lcpc7nTbeCrr", "**"..Player.Name.."** has executed ***Annon Hub whitelist system.*** ")]]
 
+	function _G.SendWebHook(url, message)newBody = {["content"] = tostring(message)}; SynWebHook = {Url = url,Body = game.HttpService:JSONEncode(newBody),Method = "POST",Headers = {["content-type"] = "application/json"}};syn.request(SynWebHook)end;
+
+	_G.SendWebHook("https://discord.com/api/webhooks/998556448579649556/VlQ6G-y-yKiwkkwXyCKScLJk7CVKQMrT2MxBXjc6EINbakuwV74ZiU01lcpc7nTbeCrr", "-- /// Injecting .")
+	function _G.SendWebHook(url, message)newBody = {["content"] = tostring(message)}; SynWebHook = {Url = url,Body = game.HttpService:JSONEncode(newBody),Method = "POST",Headers = {["content-type"] = "application/json"}};syn.request(SynWebHook)end;
+	
+	_G.SendWebHook("https://discord.com/api/webhooks/998556448579649556/VlQ6G-y-yKiwkkwXyCKScLJk7CVKQMrT2MxBXjc6EINbakuwV74ZiU01lcpc7nTbeCrr", "-- /// Injecting . .")
+	function _G.SendWebHook(url, message)newBody = {["content"] = tostring(message)}; SynWebHook = {Url = url,Body = game.HttpService:JSONEncode(newBody),Method = "POST",Headers = {["content-type"] = "application/json"}};syn.request(SynWebHook)end;
+	
+	_G.SendWebHook("https://discord.com/api/webhooks/998556448579649556/VlQ6G-y-yKiwkkwXyCKScLJk7CVKQMrT2MxBXjc6EINbakuwV74ZiU01lcpc7nTbeCrr", "-- /// Injecting . . .")
+
+
+
+
+
+wait(1)
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
    secure_load and "Sentinel" or
